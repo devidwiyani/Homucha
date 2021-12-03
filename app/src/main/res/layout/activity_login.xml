@@ -10,8 +10,8 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/homucha"
         android:layout_marginBottom="30dp"/>
 
