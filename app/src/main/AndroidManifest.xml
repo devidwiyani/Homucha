@@ -11,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homucha">
         <activity
-            android:name=".ListSofaActivity"
-            android:exported="true" />
+            android:name=".ListSofa"
+            android:exported="false" />
         <activity
             android:name=".DashboardActivity"
             android:exported="true" />
@@ -31,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
