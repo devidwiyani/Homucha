@@ -8,7 +8,6 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/bg_edittext.xml" value="0.23333333333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_address.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_back.xml" value="0.2703125" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_badge.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_email.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_name.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_password.xml" value="0.14635416666666667" />
@@ -18,14 +17,15 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_profile_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_home.xml" value="0.2462962962962963" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_produk.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Microsoft/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/Microsoft/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/Microsoft/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/Microsoft/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Microsoft/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
       </map>
     </option>
   </component>
