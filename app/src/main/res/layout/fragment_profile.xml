@@ -5,113 +5,252 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <include layout="@layout/back_profile_toolbar"/>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="20dp"
-        android:layout_margin="20dp"
-        android:padding="20dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
-
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/profile"
-                android:layout_marginRight="10dp"/>
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/image"
-                android:padding="5dp"
-                android:text="Devi Dwiyani"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/image"
-                android:layout_below="@id/name"
-                android:padding="5dp"
-                android:text="devidwiyani52@gmail.com" />
-
-            <TextView
-                android:id="@+id/title_alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/image"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/black"
-                android:text="Alamat" />
-
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title_alamat"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_edittext"
-                android:padding="10dp"
-                android:text="Jln. Hayamn Wuruk" />
-
-            <TextView
-                android:id="@+id/title_notelp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/alamat"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/black"
-                android:text="No Telp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title_notelp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_edittext"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:text="081786798201" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:padding="20dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/icon_homucha"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_homucha_house"
-                android:layout_gravity="center_horizontal"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ABOUT US"/>
+                app:cardElevation="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/image"
+                        android:padding="5dp"
+                        android:text="Devi Dwiyani"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name"
+                        android:layout_toRightOf="@+id/image"
+                        android:padding="5dp"
+                        android:text="devidwiyani52@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/title_alamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image"
+                        android:layout_marginTop="20dp"
+                        android:text="Alamat" />
+
+                    <TextView
+                        android:id="@+id/alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_alamat"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_text"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="Jln. Hayam Wuruk Gg. Drupadi No. 17A"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/title_notelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alamat"
+                        android:layout_marginTop="10dp"
+                        android:text="No Telp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_notelp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_text"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="081786798201"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/icon_cart"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/ic_shopping_cart"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CART"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/icon_cart"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chevron_right"
+                        android:backgroundTint="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/desc"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CONTACT US"
+                            android:textColor="@color/black" />
+
+                        <ImageButton
+                            android:id="@+id/arrowBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/ic_arrow_drop" />
+
+                        <RelativeLayout
+                            android:id="@+id/expandableView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/arrowBtn"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:paddingHorizontal="10dp">
+
+                            <ImageView
+                                android:id="@+id/instagram"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_instagram" />
+
+                            <TextView
+                                android:id="@+id/title_instagram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toEndOf="@id/instagram"
+                                android:text="homucha_id"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/facebook"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/instagram"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_facebook" />
+
+                            <TextView
+                                android:id="@+id/title_facebook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title_instagram"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_toEndOf="@id/facebook"
+                                android:text="homucha_furniture"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/website"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/facebook"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_lwebsite" />
+
+                            <TextView
+                                android:id="@+id/title_website"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title_facebook"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_toEndOf="@id/facebook"
+                                android:text="www.homucha.co.id"
+                                android:textColor="@color/black" />
+
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
-
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 
 
 
