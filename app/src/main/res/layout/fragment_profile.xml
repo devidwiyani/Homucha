@@ -125,12 +125,14 @@
                         android:layout_toRightOf="@id/icon_cart"/>
 
                     <ImageButton
+                        android:id="@+id/btn_cart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_chevron_right"
-                        android:backgroundTint="@color/white"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_chevron_right"/>
 
                 </RelativeLayout>
 

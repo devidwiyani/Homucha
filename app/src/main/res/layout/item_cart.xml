@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/abuTua"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_product"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/sofa1" />
+
+            <TextView
+                android:id="@+id/nama_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/image_product"
+                android:text="EP. 6 UPACARA PENERIM..."
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/waktu_ep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_ep"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/like"
+                android:text="Baca Gratis Setelah6 13 hari"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hashtag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="#1" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</FrameLayout>
