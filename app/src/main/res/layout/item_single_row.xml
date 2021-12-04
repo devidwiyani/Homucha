@@ -4,7 +4,8 @@
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="4dp"
+    android:elevation="0dp"
+    android:background="@drawable/frame"
     app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true">
 

@@ -61,7 +61,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_sofa1" />
+                        android:src="@drawable/ic_sofa" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_meja1" />
+                        android:src="@drawable/ic_meja" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_kursi1" />
+                        android:src="@drawable/ic_kursi" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_dekorasi1" />
+                        android:src="@drawable/ic_dekorasi" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -181,7 +181,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_penyimpanan1" />
+                        android:src="@drawable/ic_penyimpanan" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_furnitur1" />
+                        android:src="@drawable/ic_furnitur" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -241,7 +241,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_tidur1" />
+                        android:src="@drawable/ic_tidur" />
 
                     <TextView
                         android:layout_width="wrap_content"
