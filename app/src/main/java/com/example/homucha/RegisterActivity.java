@@ -61,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(RegisterActivity.this,
                             LoginActivity.class);
+                    Toast.makeText(getApplicationContext(), "Register Berhasil!", Toast.LENGTH_SHORT).show();
                     intent.putExtra("username", ambilUsername);
                     intent.putExtra("password", ambilPassword);
                     intent.putExtra("name", ambilName);
@@ -68,9 +69,8 @@ public class RegisterActivity extends AppCompatActivity {
                     intent.putExtra("phone", ambilPhone);
                     intent.putExtra("email", ambilEmail);
                     startActivity(intent);
-                } else {
-                    //Toast.makeText(getApplicationContext(), "Data tidak boleh kosong!", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }

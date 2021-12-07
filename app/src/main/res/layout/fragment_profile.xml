@@ -41,6 +41,8 @@
                         android:layout_toRightOf="@+id/image"
                         android:padding="5dp"
                         android:text="name"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -92,7 +94,6 @@
                         android:padding="10dp"
                         android:text="phone"
                         android:textColor="@color/white" />
-
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
