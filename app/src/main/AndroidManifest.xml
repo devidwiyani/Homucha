@@ -11,9 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homucha">
         <activity
-            android:name=".CartActivity"
-            android:exported="true" />
-        <activity
             android:name=".DashboardActivity"
             android:exported="true" />
         <activity

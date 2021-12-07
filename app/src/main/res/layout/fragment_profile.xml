@@ -10,7 +10,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +27,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="20dp">
-
                     <ImageView
                         android:id="@+id/image"
                         android:layout_width="75dp"
@@ -37,21 +35,24 @@
                         android:src="@drawable/profile" />
 
                     <TextView
-                        android:id="@+id/name"
+                        android:id="@+id/prName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/image"
                         android:padding="5dp"
-                        android:text="Devi Dwiyani"
+                        android:text="name"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                     <TextView
+                        android:id="@+id/prEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/name"
+                        android:layout_below="@id/prName"
                         android:layout_toRightOf="@+id/image"
                         android:padding="5dp"
-                        android:text="devidwiyani52@gmail.com" />
+                        android:text="email"/>
 
                     <TextView
                         android:id="@+id/title_alamat"
@@ -59,10 +60,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image"
                         android:layout_marginTop="20dp"
-                        android:text="Alamat" />
+                        android:text="Address"/>
 
                     <TextView
-                        android:id="@+id/alamat"
+                        android:id="@+id/prAlamat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/title_alamat"
@@ -71,18 +72,19 @@
                         android:background="@drawable/bg_text"
                         android:gravity="center_vertical"
                         android:padding="10dp"
-                        android:text="Jln. Hayam Wuruk Gg. Drupadi No. 17A"
+                        android:text="alamat"
                         android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/title_notelp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/alamat"
+                        android:layout_below="@id/prAlamat"
                         android:layout_marginTop="10dp"
-                        android:text="No Telp" />
+                        android:text="Phone" />
 
                     <TextView
+                        android:id="@+id/prPhone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/title_notelp"
@@ -90,11 +92,9 @@
                         android:background="@drawable/bg_text"
                         android:gravity="center_vertical"
                         android:padding="10dp"
-                        android:text="081786798201"
+                        android:text="phone"
                         android:textColor="@color/white" />
-
                 </RelativeLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -135,7 +135,6 @@
                         android:src="@drawable/ic_chevron_right"/>
 
                 </RelativeLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -207,7 +206,7 @@
                                 android:layout_height="30dp"
                                 android:layout_below="@id/instagram"
                                 android:layout_margin="10dp"
-                                android:src="@drawable/ic_facebook" />
+                                android:src="@drawable/ic_instagram" />
 
                             <TextView
                                 android:id="@+id/title_facebook"
@@ -238,22 +237,10 @@
                                 android:layout_toEndOf="@id/facebook"
                                 android:text="www.homucha.co.id"
                                 android:textColor="@color/black" />
-
-
                         </RelativeLayout>
-
-
-
                     </RelativeLayout>
-
                 </androidx.cardview.widget.CardView>
-
             </androidx.cardview.widget.CardView>
-
         </LinearLayout>
-
     </ScrollView>
-
-
-
 </LinearLayout>
