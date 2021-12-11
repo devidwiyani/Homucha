@@ -52,7 +52,7 @@ public class ListSofaActivity extends AppCompatActivity {
     }
 
     void storeDataInArrays(){
-        Cursor cursor = database.readAllData();
+        Cursor cursor = database.readSofa();
         while (cursor.moveToNext()){
             produk_id.add(cursor.getString(0));
             kategori_id.add(cursor.getString(1));
@@ -63,13 +63,24 @@ public class ListSofaActivity extends AppCompatActivity {
         }
     }
 
-    private void prosesRecyclerViewAdapter() {
-//        RecyclerView recyclerView = findViewById(R.id.daftarSofa);
-//        MyAdapterRecipe adapter = new MyAdapterRecipe(dataholder, this);
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-//        recyclerView.setLayoutManager(gridLayoutManager);
-//        recyclerView.setHasFixedSize(true);
-    }
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+//        initView();
+//        loadData();
+//    }
+//
+//    private void initView() {
+//        listViewContact = findViewById(R.id.listViewContact);
+//    }
+//
+//    private void loadData() {
+//        DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+//        List<Contact> contacts = databaseHelper.findAll();
+//        if (contacts != null) {
+//            listViewContact.setAdapter(new ContactListAdapter(getApplicationContext(), contacts));
+//        }
+//    }
+
 }

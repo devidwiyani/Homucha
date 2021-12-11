@@ -290,6 +290,7 @@
                 </androidx.cardview.widget.CardView>
 
             </GridLayout>
+
         </HorizontalScrollView>
 
         <TextView

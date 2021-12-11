@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class DbHelper extends SQLiteOpenHelper {
     public static final String database_name = "db_homucha";
     public static final String table_name = "tb_user";
@@ -75,6 +77,30 @@ public class DbHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
+
+//    public List<Contact> findAll() {
+//        List<Contact> contacts = null;
+//        try {
+//            SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+//            Cursor cursor = sqLiteDatabase.rawQuery("select * from " + contactTable, null);
+//            if (cursor.moveToFirst()) {
+//                contacts = new ArrayList<Contact>();
+//                do {
+//                    Contact contact = new Contact();
+//                    contact.setId(cursor.getInt(0));
+//                    contact.setName(cursor.getString(1));
+//                    contact.setPhone(cursor.getString(2));
+//                    contact.setAddress(cursor.getString(3));
+//                    contact.setEmail(cursor.getString(4));
+//                    contact.setDescription(cursor.getString(5));
+//                    contacts.add(contact);
+//                } while (cursor.moveToNext());
+//            }
+//        } catch (Exception e) {
+//            contacts = null;
+//        }
+//        return contacts;
+//    }
 
     public void insertDataUser(ContentValues values) {
 
