@@ -17,6 +17,12 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String row_phone = "phone";
     public static final String row_email = "email";
 
+    public static final String table_cart = "tb_cart";
+    public static final String id_cart = "id_cart";
+    public static final String user_id = "id_user";
+    public static final String jumlah = "jumlah";
+
+
     private SQLiteDatabase database;
 
     public DbHelper(Context context) {
@@ -36,6 +42,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + table_name);
+        database.execSQL("DROP TABLE IF EXISTS " + table_cart);
         onCreate(database);
     }
 

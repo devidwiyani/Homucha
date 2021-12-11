@@ -36,10 +36,10 @@
                 android:id="@+id/waktu_ep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title_ep"
+                android:layout_below="@id/nama_product"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_toEndOf="@id/like"
+                android:layout_toEndOf="@id/image_product"
                 android:text="Baca Gratis Setelah6 13 hari"
                 android:textSize="10dp" />
 

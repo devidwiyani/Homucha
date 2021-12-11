@@ -31,14 +31,14 @@
                         android:id="@+id/image"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:src="@drawable/profile" />
 
                     <TextView
                         android:id="@+id/prName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/image"
+                        android:layout_toEndOf="@+id/image"
                         android:padding="5dp"
                         android:text="name"
                         android:textSize="14sp"
@@ -50,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/prName"
-                        android:layout_toRightOf="@+id/image"
+                        android:layout_toEndOf="@+id/image"
                         android:padding="5dp"
                         android:text="email"/>
 
@@ -69,11 +69,10 @@
                         android:layout_below="@id/title_alamat"
                         android:layout_centerInParent="true"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/bg_text"
+                        android:background="@drawable/frame"
                         android:gravity="center_vertical"
                         android:padding="10dp"
-                        android:text="alamat"
-                        android:textColor="@color/white" />
+                        android:text="alamat" />
 
                     <TextView
                         android:id="@+id/title_notelp"
@@ -89,11 +88,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/title_notelp"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/bg_text"
+                        android:background="@drawable/frame"
                         android:gravity="center_vertical"
                         android:padding="10dp"
-                        android:text="phone"
-                        android:textColor="@color/white" />
+                        android:text="phone" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -114,7 +112,10 @@
                         android:id="@+id/icon_cart"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_margin="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/ic_shopping_cart"/>
 
                     <TextView
@@ -132,7 +133,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_chevron_right"/>
+                        android:src="@drawable/ic_chevron_right" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

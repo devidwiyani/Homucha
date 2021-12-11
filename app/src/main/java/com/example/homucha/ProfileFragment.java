@@ -1,5 +1,6 @@
 package com.example.homucha;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -17,7 +18,7 @@ import androidx.fragment.app.Fragment;
 public class ProfileFragment extends Fragment {
 
     RelativeLayout expandableView;
-    ImageButton arrowBtn;
+    ImageButton arrowBtn, btnCart;
     CardView cardView;
 
     @Nullable
@@ -28,6 +29,7 @@ public class ProfileFragment extends Fragment {
         expandableView = v.findViewById(R.id.expandableView);
         arrowBtn = v.findViewById(R.id.arrowBtn);
         cardView = v.findViewById(R.id.cardView);
+        btnCart = v.findViewById(R.id.btn_cart);
 
 
         arrowBtn.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +47,15 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return v;
+
     }
 }
