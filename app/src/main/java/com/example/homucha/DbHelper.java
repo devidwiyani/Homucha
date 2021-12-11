@@ -42,7 +42,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         String queryUser = "CREATE TABLE " + table_name + "(" + id_user + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + row_username + " TEXT," + row_password + " TEXT," + row_name + " TEXT,"
-                + row_address + " TEXT," + row_phone + " INTEGER,"
+                + row_address + " TEXT," + row_phone + " TEXT,"
                 + row_email + " TEXT)";
         database.execSQL(queryUser);
         String queryProduk = "CREATE TABLE " + table_produk + "(" + id_produk + " INTEGER PRIMARY KEY AUTOINCREMENT, "
