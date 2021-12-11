@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.sofa:
-                Intent intent = new Intent(getActivity(), ListSofa.class);
+                Intent intent = new Intent(getActivity(), ListSofaActivity.class);
                 startActivity(intent);
                 break;
             default:

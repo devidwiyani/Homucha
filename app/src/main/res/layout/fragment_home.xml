@@ -35,257 +35,262 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <GridLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:columnCount="4"
-            android:rowCount="3"
-            android:padding="10dp">
+            android:layout_height="wrap_content">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/sofa"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:columnCount="4"
+                android:rowCount="3"
+                android:padding="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sofa"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_sofa" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Sofa"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_sofa" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Sofa"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/meja"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/meja"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_meja" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Table"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_meja" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Table"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/kursi"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/kursi"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_kursi" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Chair"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_kursi" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Chair"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/dekorasi"
-                android:layout_width="90dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dekorasi"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_dekorasi" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Decoration"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_dekorasi" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Decoration"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/penyimpanan"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/penyimpanan"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_penyimpanan" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Storage"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_penyimpanan" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Storage"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/alatRumah"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/alatRumah"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_furnitur" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Furniture"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_furnitur" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Furniture"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/tTidur"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tTidur"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_tidur" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Bed"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_tidur" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Bed"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/set"
-                android:layout_width="90dp"
-                android:layout_height="100dp"
-                android:clickable="true"
-                app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/set"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:src="@drawable/ic_set" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Furniture Set"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_set" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Furniture Set"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
-        </GridLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/tBest"
