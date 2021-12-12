@@ -15,21 +15,22 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     RelativeLayout expandableView;
-    ImageButton arrowBtn, btnCart;
-    CardView cardView;
+    ImageButton arrowBtn;
+    CardView cardView, cart;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        cart = v.findViewById(R.id.cart);
+        cart.setOnClickListener(this);
 
         expandableView = v.findViewById(R.id.expandableView);
         arrowBtn = v.findViewById(R.id.arrowBtn);
         cardView = v.findViewById(R.id.cardView);
-        btnCart = v.findViewById(R.id.btn_cart);
 
 
         arrowBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,15 +48,20 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        btnCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
         return v;
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.cart:
+                Intent intent = new Intent(getActivity(), CartActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
     }
 }

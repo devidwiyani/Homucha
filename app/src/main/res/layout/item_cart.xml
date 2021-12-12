@@ -33,7 +33,7 @@
                 android:textColor="@color/black" />
             
             <TextView
-                android:id="@+id/waktu_ep"
+                android:id="@+id/amount_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/nama_product"
@@ -43,14 +43,6 @@
                 android:text="Baca Gratis Setelah6 13 hari"
                 android:textSize="10dp" />
 
-            <TextView
-                android:id="@+id/hashtag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
-                android:text="#1" />
 
         </RelativeLayout>
 

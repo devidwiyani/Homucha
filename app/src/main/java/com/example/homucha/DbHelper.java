@@ -17,6 +17,13 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String row_phone = "phone";
     public static final String row_email = "email";
 
+    public static final String table_cart = "tb_user";
+    public static final String id_cart = "id_cart";
+    public static final String id_product = "id_product";
+    public static final String row_product_name = "product_name";
+    public static final String row_product_amount = "product_amount";
+
+
     private SQLiteDatabase database;
 
     public DbHelper(Context context) {
@@ -31,11 +38,17 @@ public class DbHelper extends SQLiteOpenHelper {
                 + row_address + " TEXT," + row_phone + " TEXT,"
                 + row_email + " TEXT)";
         database.execSQL(queryUser);
+
+        String queryCart = "CREATE TABLE " + table_cart + "(" + id_cart + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + id_product + " INTEGER," + row_product_name + " TEXT," + row_product_amount + " TEXT)";
+        database.execSQL(queryUser);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + table_name);
+        database.execSQL("DROP TABLE IF EXISTS " + table_cart);
         onCreate(database);
     }
 
