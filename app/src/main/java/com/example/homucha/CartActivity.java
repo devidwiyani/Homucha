@@ -43,13 +43,13 @@ public class CartActivity extends AppCompatActivity {
     }
 
     protected void getData(){
-        SQLiteDatabase ReadData = database.getReadableDatabase();
-        Cursor cursor = ReadData.rawQuery("SELECT * FROM " + DbHelper.table_cart, null);
-
-        cursor.moveToFirst();
-
-        for (int count=0; count < cursor.getCount(); count++){
-            
-        }
+//        SQLiteDatabase ReadData = database.getReadableDatabase();
+//        Cursor cursor = ReadData.rawQuery("SELECT * FROM " + DbHelper.table_cart, null);
+//
+//        cursor.moveToFirst();
+//
+//        for (int count=0; count < cursor.getCount(); count++){
+//
+//        }
     }
 }

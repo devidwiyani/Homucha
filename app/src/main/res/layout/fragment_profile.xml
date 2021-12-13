@@ -222,7 +222,7 @@
                                 android:layout_height="30dp"
                                 android:layout_below="@id/instagram"
                                 android:layout_margin="10dp"
-                                android:src="@drawable/ic_instagram" />
+                                android:src="@drawable/ic_facebook" />
 
                             <TextView
                                 android:id="@+id/title_facebook"
