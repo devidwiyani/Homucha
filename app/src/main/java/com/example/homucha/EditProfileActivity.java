@@ -100,4 +100,8 @@ public class EditProfileActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    public void backEditProfile(View view) {
+        finish();
+    }
 }
