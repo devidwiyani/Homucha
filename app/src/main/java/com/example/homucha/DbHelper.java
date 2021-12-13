@@ -25,7 +25,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String row_deskripsi = "deskripsi";
     public static final String row_gambar = "gambar";
 
-    public static final String table_kategori = "tb_katgeori";
+    public static final String table_kategori = "tb_kategori";
     public static final String id_kategori = "_id";
     public static final String row_nkategori = "nama";
 
@@ -64,7 +64,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public Cursor readSofa(){
-        String sql = "select * from "+table_produk+" WHERE kategoriId = 'sofa'";
+        String sql = "select * from "+table_produk+" WHERE kategoriId = 1";
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -72,6 +72,7 @@ public class DbHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(sql, null);
         }
         return cursor;
+
     }
 
     public void insertDataUser(ContentValues values) {
