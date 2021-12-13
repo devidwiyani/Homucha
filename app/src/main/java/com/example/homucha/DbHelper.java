@@ -29,6 +29,13 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String id_kategori = "_id";
     public static final String row_nkategori = "nama";
 
+    public static final String table_cart = "tb_user";
+    public static final String id_cart = "id_cart";
+    public static final String id_product = "id_product";
+    public static final String row_product_name = "product_name";
+    public static final String row_product_amount = "product_amount";
+
+
     private SQLiteDatabase database;
 
     public DbHelper(Context context) {
@@ -43,35 +50,12 @@ public class DbHelper extends SQLiteOpenHelper {
                 + row_address + " TEXT," + row_phone + " TEXT,"
                 + row_email + " TEXT)";
         database.execSQL(queryUser);
-        String queryProduk = "CREATE TABLE " + table_produk + "(" + id_produk + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + kategori_id + " INTEGER," + row_nproduk + " TEXT," + row_harga + " INTEGER,"
-                + row_deskripsi + " TEXT," + row_gambar + " TEXT, "
-                + " FOREIGN KEY ("+kategori_id+") REFERENCES "+table_kategori+"("+id_kategori+"));";
-        database.execSQL(queryProduk);
-        String queryKategori = "CREATE TABLE " + table_kategori + "(" + id_kategori + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + row_nkategori + " TEXT)";
-        database.execSQL(queryKategori);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + table_name);
         onCreate(database);
-        database.execSQL("DROP TABLE IF EXISTS " + table_produk);
-        onCreate(database);
-        database.execSQL("DROP TABLE IF EXISTS " + table_kategori);
-        onCreate(database);
-    }
-
-    public Cursor readSofa(){
-        String sql = "select * from "+table_produk+" WHERE kategoriId = 'sofa'";
-        SQLiteDatabase db = getReadableDatabase();
-
-        Cursor cursor = null;
-        if (db != null) {
-            cursor = db.rawQuery(sql, null);
-        }
-        return cursor;
     }
 
     public void insertDataUser(ContentValues values) {
@@ -93,19 +77,5 @@ public class DbHelper extends SQLiteOpenHelper {
             return true;
         else
             return false;
-    }
-
-    public void editProfile(String usernameOld, String username, String password,  String name, String address,
-                            String phone, String email) {
-        SQLiteDatabase db = getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(row_username, username);
-        values.put(row_password, password);
-        values.put(row_name, name);
-        values.put(row_address, address);
-        values.put(row_phone, phone);
-        values.put(row_email, email);
-        db.update(table_name, values, "username=?", new String[]{usernameOld});
-        db.close();
     }
 }
