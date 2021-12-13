@@ -61,7 +61,24 @@ public class DashboardActivity extends AppCompatActivity {
             Cursor checkItem = db.rawQuery("SELECT*FROM tb_produk",null);
             if(checkItem.getCount() == 0)
             {
-                //dbWrite.execSQL("INSERT INTO tb_produk VALUES(1,1,)");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(1,1," +
+                        "'CASABEL Estrella Sofa Kulit Asli Recliner Minimalis',19400000," +
+                        "'Sofa empuk 1',"+R.drawable.sofa1+")");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(2,1," +
+                        "'Ebonia - Sofa Bed Milan',2825000," +
+                        "'Sofa empuk 2',"+R.drawable.sofa2+")");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(3,1," +
+                        "'Ivaro Sofa L Bed Swift',3350000," +
+                        "'Sofa empuk 3',"+R.drawable.sofa3+")");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(4,1," +
+                        "'Zyo Hererra Sofa',2899000," +
+                        "'Sofa empuk 4',"+R.drawable.sofa4+")");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(5,1," +
+                        "'Olc Sofabed Wellington',1999000," +
+                        "'Sofa empuk 5',"+R.drawable.sofa5+")");
+                dbWrite.execSQL("INSERT INTO tb_produk VALUES(6,1," +
+                        "'Morres Queen Sofa Bed',1950000," +
+                        "'Sofa empuk 6',"+R.drawable.sofa6+")");
             }
             bundleFragment = new Bundle();
             bundleFragment.putString("sendName", "name");
