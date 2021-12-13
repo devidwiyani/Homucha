@@ -86,7 +86,33 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public Cursor readSofa(){
-        String sql = "select * from "+table_produk+" WHERE kategoriId = 'sofa'";
+        String sql = "select * from "+table_produk+" WHERE kategoriId = 1";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readSpecCategory(String category){
+        String sql = "select * from "+table_produk+"" +
+                "INNER JOIN tb_kategori ON tb_produk.kategoriId = tb_kategori._id " +
+                "WHERE tb_kategori.nama = "+category;
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readProductId(int id)
+    {
+        String sql = "select * from "+table_produk+"" +
+                "WHERE _id = "+id;
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -150,5 +176,33 @@ public class DbHelper extends SQLiteOpenHelper {
         dbWrite.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
         dbWrite.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
         dbWrite.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
+    }
+
+    public void insertCart(int id_user, int id_barang)
+    {
+        SQLiteDatabase dbWrite = getWritableDatabase();
+        SQLiteDatabase dbRead = getReadableDatabase();
+        Cursor checkId = dbRead.rawQuery("SELECT*FROM tb_carting",null);
+        int idLast;
+        if(checkId.getCount() == 0)
+        {
+            idLast = 1;
+        }
+        else
+        {
+            checkId.moveToLast();
+            idLast = checkId.getInt(checkId.getColumnIndex("_id"))+1;
+        }
+        Cursor checkSameInCart = dbRead.rawQuery("SELECT*FROM tb_carting WHERE idProduk = "+id_barang,null);
+        if(checkSameInCart.getCount() == 0)
+        {
+            dbWrite.execSQL("INSERT INTO tb_carting VALUES ("+idLast+","+id_user+","+id_barang+",1)");
+        }
+        else
+        {
+            checkSameInCart.moveToLast();
+            dbWrite.execSQL("UPDATE tb_carting SET jumlahBeli = jumlahBeli + 1" +
+                    "WHERE _id = "+checkSameInCart.getInt(checkSameInCart.getColumnIndex("_id")));
+        }
     }
 }

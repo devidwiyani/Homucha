@@ -58,11 +58,12 @@
             android:textColor="#000"/>
 
         <TextView
+            android:id="@+id/harga"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="harga"
-            android:textSize="23sp"
-            android:textColor="@color/kuning"/>
+            android:textColor="@color/kuning"
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/ab"
@@ -80,16 +81,17 @@
             android:backgroundTint="@color/coklat"/>
 
         <TextView
+            android:id="@+id/desc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
             android:text="text deskripsi"
-            android:textSize="18sp"
             android:textColor="@color/abuTua"
-            android:justificationMode="inter_word"/>
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/updateContact"
+            android:id="@+id/addToCart"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center"
