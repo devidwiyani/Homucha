@@ -92,6 +92,19 @@
                         android:gravity="center_vertical"
                         android:padding="10dp"
                         android:text="phone" />
+
+                    <TextView
+                        android:id="@+id/editProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prPhone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/acme"
+                        android:text="EDIT"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
