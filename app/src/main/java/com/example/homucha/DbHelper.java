@@ -17,6 +17,18 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String row_phone = "phone";
     public static final String row_email = "email";
 
+    public static final String table_produk = "tb_produk";
+    public static final String id_produk = "_id";
+    public static final String kategori_id = "kategoriId";
+    public static final String row_nproduk = "nama";
+    public static final String row_harga = "harga";
+    public static final String row_deskripsi = "deskripsi";
+    public static final String row_gambar = "gambar";
+
+    public static final String table_kategori = "tb_katgeori";
+    public static final String id_kategori = "_id";
+    public static final String row_nkategori = "nama";
+
     public static final String table_cart = "tb_user";
     public static final String id_cart = "id_cart";
     public static final String id_product = "id_product";
@@ -38,17 +50,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 + row_address + " TEXT," + row_phone + " TEXT,"
                 + row_email + " TEXT)";
         database.execSQL(queryUser);
-
-        String queryCart = "CREATE TABLE " + table_cart + "(" + id_cart + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + id_product + " INTEGER," + row_product_name + " TEXT," + row_product_amount + " TEXT)";
-        database.execSQL(queryUser);
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + table_name);
-        database.execSQL("DROP TABLE IF EXISTS " + table_cart);
         onCreate(database);
     }
 

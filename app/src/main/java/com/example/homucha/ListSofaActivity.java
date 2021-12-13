@@ -41,7 +41,7 @@ public class ListSofaActivity extends AppCompatActivity {
         produk_deskripsi = new ArrayList<>();
         produk_gambar = new ArrayList<>();
 
-//        storeDataInArrays();
+        storeDataInArrays();
 
         productAdapter = new ProductAdapter(ListSofaActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar);
         daftarSofa.setAdapter(productAdapter);
@@ -51,17 +51,17 @@ public class ListSofaActivity extends AppCompatActivity {
         daftarSofa.setHasFixedSize(true);
     }
 
-//    void storeDataInArrays(){
-//        Cursor cursor = database.readSofa();
-//        while (cursor.moveToNext()){
-//            produk_id.add(cursor.getString(0));
-//            kategori_id.add(cursor.getString(1));
-//            produk_nama.add(cursor.getString(2));
-//            produk_harga.add(cursor.getString(3));
-//            produk_deskripsi.add(cursor.getString(4));
-//            produk_gambar.add(cursor.getString(5));
-//        }
-//    }
+    void storeDataInArrays(){
+        Cursor cursor = database.readSofa();
+        while (cursor.moveToNext()){
+            produk_id.add(cursor.getString(0));
+            kategori_id.add(cursor.getString(1));
+            produk_nama.add(cursor.getString(2));
+            produk_harga.add(cursor.getString(3));
+            produk_deskripsi.add(cursor.getString(4));
+            produk_gambar.add(cursor.getString(5));
+        }
+    }
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {

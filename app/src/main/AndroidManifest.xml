@@ -11,8 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homucha">
         <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListSofaActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".DashboardActivity"
             android:exported="true" />
