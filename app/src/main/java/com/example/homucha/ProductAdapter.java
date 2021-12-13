@@ -15,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
@@ -43,22 +44,22 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.product_image.setText(String.valueOf(produk_gambar.get(position)));
-        holder.product_name.setText(String.valueOf(produk_nama.get(position)));
-        holder.product_price.setText(String.valueOf(produk_harga.get(position)));
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.product_image.setText(String.valueOf(produk_gambar.get(holder.getAdapterPosition())));
+        holder.product_name.setText(String.valueOf(produk_nama.get(holder.getAdapterPosition())));
+        holder.product_price.setText(String.valueOf(produk_harga.get(holder.getAdapterPosition())));
 
         //Recyclerview onClickListener
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ProductDetailActivity.class);
-                intent.putExtra("id", String.valueOf(produk_id.get(position)));
-                intent.putExtra("ketegoriId", String.valueOf(kategori_id.get(position)));
-                intent.putExtra("nama", String.valueOf(produk_nama.get(position)));
-                intent.putExtra("harga", String.valueOf(produk_harga.get(position)));
-                intent.putExtra("deskripsi", String.valueOf(produk_deskripsi.get(position)));
-                intent.putExtra("gambar", String.valueOf(produk_gambar.get(position)));
+                intent.putExtra("id", String.valueOf(produk_id.get(holder.getAdapterPosition())));
+                intent.putExtra("ketegoriId", String.valueOf(kategori_id.get(holder.getAdapterPosition())));
+                intent.putExtra("nama", String.valueOf(produk_nama.get(holder.getAdapterPosition())));
+                intent.putExtra("harga", String.valueOf(produk_harga.get(holder.getAdapterPosition())));
+                intent.putExtra("deskripsi", String.valueOf(produk_deskripsi.get(holder.getAdapterPosition())));
+                intent.putExtra("gambar", String.valueOf(produk_gambar.get(holder.getAdapterPosition())));
                 activity.startActivityForResult(intent, 1);
             }
         });
@@ -73,7 +74,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         TextView product_image, product_name, product_price;
         CardView cardView;
 
-        MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             product_image = itemView.findViewById(R.id.img);
             product_name = itemView.findViewById(R.id.nama);

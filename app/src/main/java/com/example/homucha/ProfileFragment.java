@@ -27,6 +27,7 @@ public class ProfileFragment extends Fragment{
     TextView accName, accEmail, accAddress, accPhone, edit;
     String strName, strEmail, strAddress, strPhone, strUsername;
     Button editButton;
+    sharedPrefManager spm;
 
     @Nullable
     @Override
@@ -90,7 +91,6 @@ public class ProfileFragment extends Fragment{
                 intent.putExtra("editProfile", strName);
                 intent.putExtra("editProfile1", strUsername);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
 
@@ -100,6 +100,7 @@ public class ProfileFragment extends Fragment{
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Logout",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getActivity(),LoginActivity.class);
+                spm.clearLoggedInUser(v.getContext());
                 startActivity(intent);
             }
         });

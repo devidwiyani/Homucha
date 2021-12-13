@@ -20,6 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText regUsername, regPassword, regName, regAddress, regPhone, regEmail;
     public Button btnRegister;
     DbHelper dbHelper;
+    sharedPrefManager spm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
                     intent.putExtra("address", ambilAddress);
                     intent.putExtra("phone", ambilPhone);
                     intent.putExtra("email", ambilEmail);
+                    spm.saveSPInt(getBaseContext(), spm.SP_ID, dbHelper.checkUserId(ambilUsername, ambilPassword));
                     startActivity(intent);
                 }
 

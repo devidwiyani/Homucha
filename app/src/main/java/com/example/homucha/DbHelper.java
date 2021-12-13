@@ -45,7 +45,7 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL(queryUser);
         String queryProduk = "CREATE TABLE " + table_produk + "(" + id_produk + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + kategori_id + " INTEGER," + row_nproduk + " TEXT," + row_harga + " INTEGER,"
-                + row_deskripsi + " TEXT," + row_gambar + " TEXT, "
+                + row_deskripsi + " TEXT," + row_gambar + " INTEGER, "
                 + " FOREIGN KEY ("+kategori_id+") REFERENCES "+table_kategori+"("+id_kategori+"));";
         database.execSQL(queryProduk);
         String queryKategori = "CREATE TABLE " + table_kategori + "(" + id_kategori + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -71,6 +71,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 "idBarang INTEGER," +
                 "hargaSatuan FLOAT(20,2)," +
                 "jumlahBeli INTEGER)");
+        setKategoriBarang();
     }
 
     @Override
@@ -128,5 +129,26 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(row_email, email);
         db.update(table_name, values, "username=?", new String[]{usernameOld});
         db.close();
+    }
+
+    public int checkUserId(String username, String password)
+    {
+        SQLiteDatabase dbRead = getReadableDatabase();
+        Cursor check = dbRead.rawQuery("SELECT*FROM tb_user WHERE username = '"+username+"' AND password = '"+password+"'",null);
+        check.moveToFirst();
+        return check.getInt(check.getColumnIndex("_id"));
+    }
+
+    public void setKategoriBarang()
+    {
+        SQLiteDatabase dbWrite = getWritableDatabase();
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(1,'sofa')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(2,'meja')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(3,'kursi')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(4,'dekorasi')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(5,'lemari')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
+        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
     }
 }
