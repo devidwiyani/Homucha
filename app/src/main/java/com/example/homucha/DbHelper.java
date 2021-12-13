@@ -51,15 +51,36 @@ public class DbHelper extends SQLiteOpenHelper {
         String queryKategori = "CREATE TABLE " + table_kategori + "(" + id_kategori + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + row_nkategori + " TEXT)";
         database.execSQL(queryKategori);
+        database.execSQL("CREATE TABLE tb_carting (" +
+                "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "idUser INTEGER," +
+                "idProduk INTEGER," +
+                "jumlahBeli INTEGER" +
+                ")");
+        database.execSQL("CREATE TABLE tb_pembelian(" +
+                "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "idUser INTEGER," +
+                "alamatPengiriman VARCHAR(100)," +
+                "hargaTotal FLOAT(20,2)," +
+                "jenisPembayaran VARCHAR(100)," +
+                "statusPembayaran VARCHAR(50)," +
+                "statusPengiriman VARCHAR(50))");
+        database.execSQL("CREATE TABLE det_pembelian(" +
+                "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "idPembelian INTEGER," +
+                "idBarang INTEGER," +
+                "hargaSatuan FLOAT(20,2)," +
+                "jumlahBeli INTEGER)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + table_name);
-        onCreate(database);
         database.execSQL("DROP TABLE IF EXISTS " + table_produk);
-        onCreate(database);
         database.execSQL("DROP TABLE IF EXISTS " + table_kategori);
+        database.execSQL("DROP TABLE IF EXISTS tb_carting");
+        database.execSQL("DROP TABLE IF EXISTS tb_pembelian");
+        database.execSQL("DROP TABLE IF EXISTS det_pembelian");
         onCreate(database);
     }
 
@@ -89,7 +110,7 @@ public class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         database.close();
 
-        if (count > 0)
+        if(count > 0)
             return true;
         else
             return false;
