@@ -11,6 +11,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homucha">
         <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListElectronicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListBedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListFurnitureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListStorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListDecorationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListChairActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BestSellerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProductDetailActivity"
             android:exported="false" />
         <activity
@@ -24,6 +51,9 @@
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfileActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -115,4 +115,18 @@ public class DbHelper extends SQLiteOpenHelper {
         else
             return false;
     }
+
+    public void editProfile(String usernameOld, String username, String password,  String name, String address,
+                            String phone, String email) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(row_username, username);
+        values.put(row_password, password);
+        values.put(row_name, name);
+        values.put(row_address, address);
+        values.put(row_phone, phone);
+        values.put(row_email, email);
+        db.update(table_name, values, "username=?", new String[]{usernameOld});
+        db.close();
+    }
 }

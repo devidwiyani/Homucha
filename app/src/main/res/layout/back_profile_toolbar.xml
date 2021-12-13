@@ -13,4 +13,12 @@
         android:layout_centerInParent="true"
         android:textSize="20dp"/>
 
+    <ImageView
+        android:id="@+id/img_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"/>
+
 </RelativeLayout>

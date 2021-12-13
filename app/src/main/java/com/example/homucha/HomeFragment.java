@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     CarouselView carouselView;
     int[] sampleImages = {R.drawable.ce1, R.drawable.ce2, R.drawable.ce3};
     CardView sofa, meja, kursi, dekorasi, penyimpanan, furnitur, kasur, elektronik;
+    ImageButton next;
 
     @Nullable
     @Override
@@ -35,6 +37,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         furnitur = v.findViewById(R.id.furnitur);
         kasur = v.findViewById(R.id.kasur);
         elektronik = v.findViewById(R.id.elektronik);
+        next = v.findViewById(R.id.next);
 
         sofa.setOnClickListener(this);
         meja.setOnClickListener(this);
@@ -44,6 +47,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         furnitur.setOnClickListener(this);
         kasur.setOnClickListener(this);
         elektronik.setOnClickListener(this);
+        next.setOnClickListener(this);
 
         ImageListener imageListener = new ImageListener() {
             @Override
@@ -94,6 +98,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.elektronik:
                 Intent intent8 = new Intent(getActivity(), ListElectronicActivity.class);
                 startActivity(intent8);
+                break;
+            case R.id.next:
+                Intent intent9 = new Intent(getActivity(), BestSellerActivity.class);
+                startActivity(intent9);
                 break;
             default:
                 break;
