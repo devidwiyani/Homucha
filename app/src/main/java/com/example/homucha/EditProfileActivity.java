@@ -102,6 +102,9 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     public void backEditProfile(View view) {
+
+        Intent intent = new Intent(EditProfileActivity.this,DashboardActivity.class);
+        startActivity(intent);
         finish();
     }
 }
