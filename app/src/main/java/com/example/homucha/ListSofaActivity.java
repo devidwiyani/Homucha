@@ -62,25 +62,4 @@ public class ListSofaActivity extends AppCompatActivity {
             produk_gambar.add(cursor.getString(5));
         }
     }
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        initView();
-//        loadData();
-//    }
-//
-//    private void initView() {
-//        listViewContact = findViewById(R.id.listViewContact);
-//    }
-//
-//    private void loadData() {
-//        DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
-//        List<Contact> contacts = databaseHelper.findAll();
-//        if (contacts != null) {
-//            listViewContact.setAdapter(new ContactListAdapter(getApplicationContext(), contacts));
-//        }
-//    }
-
 }
