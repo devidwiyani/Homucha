@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class DashboardActivity extends AppCompatActivity {
-    DbHelper dbHelper;
+    static DbHelper dbHelper;
     String mainUser;
     protected Cursor cursor;
     String name, email, address, phone;
