@@ -25,7 +25,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String row_deskripsi = "deskripsi";
     public static final String row_gambar = "gambar";
 
-    public static final String table_kategori = "tb_katgeori";
+    public static final String table_kategori = "tb_kategori";
     public static final String id_kategori = "_id";
     public static final String row_nkategori = "nama";
 
