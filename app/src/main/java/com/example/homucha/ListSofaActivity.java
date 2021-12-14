@@ -42,8 +42,8 @@ public class ListSofaActivity extends AppCompatActivity {
         produk_gambar = new ArrayList<>();
 
         storeDataInArrays();
-
-        productAdapter = new ProductAdapter(ListSofaActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar);
+        Cursor cursor1 = database.readSofa();
+        productAdapter = new ProductAdapter(ListSofaActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
         daftarSofa.setAdapter(productAdapter);
         daftarSofa.setLayoutManager(new LinearLayoutManager(this));
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);

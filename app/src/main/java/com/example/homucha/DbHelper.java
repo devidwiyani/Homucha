@@ -111,7 +111,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     public Cursor readProductId(int id)
     {
-        String sql = "select * from "+table_produk+"" +
+        String sql = "select * from "+table_produk+" " +
                 "WHERE _id = "+id;
         SQLiteDatabase db = getReadableDatabase();
 

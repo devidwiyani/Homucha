@@ -25,7 +25,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
         intent = getIntent();
-        productId = intent.getIntExtra("id_barang",0);
+        productId = intent.getIntExtra("id",0);
         namaProduk = findViewById(R.id.t2);
         harga = findViewById(R.id.harga);
         deskripsi = findViewById(R.id.desc);
