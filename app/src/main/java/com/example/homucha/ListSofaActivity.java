@@ -5,10 +5,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -42,15 +44,30 @@ public class ListSofaActivity extends AppCompatActivity {
         produk_gambar = new ArrayList<>();
 
         storeDataInArrays();
-        Cursor cursor1 = database.readSofa();
-        productAdapter = new ProductAdapter(ListSofaActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
-        daftarSofa.setAdapter(productAdapter);
-        daftarSofa.setLayoutManager(new LinearLayoutManager(this));
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        daftarSofa.setLayoutManager(gridLayoutManager);
-        daftarSofa.setHasFixedSize(true);
-    }
+        Intent fromHome = getIntent();
+        if(fromHome.getIntExtra("id_jenis",0) == 0)
+        {
+            Toast.makeText(this, "I Cant Read Data. Please Refresh The App First", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Cursor cursor1 = database.readSpecCategory(fromHome.getIntExtra("id_jenis",0));
+            if(cursor1.getCount() == 0)
+            {
+                Toast.makeText(this, "No Data In Here", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                productAdapter = new ProductAdapter(ListSofaActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
+                daftarSofa.setAdapter(productAdapter);
+                daftarSofa.setLayoutManager(new LinearLayoutManager(this));
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+                daftarSofa.setLayoutManager(gridLayoutManager);
+                daftarSofa.setHasFixedSize(true);
+            }
 
+        }
+    }
     void storeDataInArrays(){
         Cursor cursor = database.readSofa();
         while (cursor.moveToNext()){

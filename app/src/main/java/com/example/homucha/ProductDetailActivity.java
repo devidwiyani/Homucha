@@ -55,7 +55,31 @@ public class ProductDetailActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int idUser = spm.getSPId(v.getContext());
-                    dbHelper.insertCart(idUser,productId);
+
+                    SQLiteDatabase dbWrite = dbHelper.getWritableDatabase();
+                    SQLiteDatabase dbRead = dbHelper.getReadableDatabase();
+                    Cursor checkId = dbRead.rawQuery("SELECT*FROM tb_carting",null);
+                    int idLast;
+                    if(checkId.getCount() == 0)
+                    {
+                        idLast = 1;
+                    }
+                    else
+                    {
+                        checkId.moveToLast();
+                        idLast = checkId.getInt(checkId.getColumnIndex("_id"))+1;
+                    }
+                    Cursor checkSameInCart = dbRead.rawQuery("SELECT*FROM tb_carting WHERE idProduk = "+productId,null);
+                    if(checkSameInCart.getCount() == 0)
+                    {
+                        dbWrite.execSQL("INSERT INTO tb_carting VALUES ("+idLast+","+idUser+","+productId+",1)");
+                    }
+                    else
+                    {
+                        checkSameInCart.moveToLast();
+                        dbWrite.execSQL("UPDATE tb_carting SET jumlahBeli = jumlahBeli + 1" +
+                                " WHERE _id = "+checkSameInCart.getInt(checkSameInCart.getColumnIndex("_id")));
+                    }
                     Toast.makeText(v.getContext(), "Barang sudah masuk di carting", Toast.LENGTH_SHORT).show();
                 }
             });

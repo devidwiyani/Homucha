@@ -8,15 +8,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class CartActivity extends AppCompatActivity {
 
     private DbHelper database;
-
+    sharedPrefManager spm;
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
+    private CartAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList productImageList;
     private ArrayList productNameList;
@@ -26,20 +27,20 @@ public class CartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-
+        int idUser= spm.getSPId(this);
         productImageList = new ArrayList();
         productNameList = new ArrayList();
         productAmountList = new ArrayList();
         database = new DbHelper(getBaseContext());
         recyclerView = findViewById(R.id.daftarCart);
         getData();
-
+        Cursor getInCart = database.getInCart(idUser);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        adapter = new CartAdapter(productImageList, productNameList, productAmountList);
+        adapter = new CartAdapter(productImageList, productNameList, productAmountList,getInCart);
         recyclerView.setAdapter(adapter);
-
+        Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
     }
 
     protected void getData(){

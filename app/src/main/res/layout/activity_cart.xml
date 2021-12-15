@@ -49,9 +49,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/daftarCart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/item_cart"/>
-
+                android:layout_height="wrap_content" />
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

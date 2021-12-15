@@ -66,38 +66,39 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intent1 = new Intent(getActivity(), ListSofaActivity.class);
         switch (v.getId()){
             case R.id.sofa:
-                Intent intent1 = new Intent(getActivity(), ListSofaActivity.class);
+                intent1.putExtra("id_jenis",1);
                 startActivity(intent1);
                 break;
             case R.id.meja:
-                Intent intent2 = new Intent(getActivity(), ListTableActivity.class);
-                startActivity(intent2);
+                intent1.putExtra("id_jenis",2);
+                startActivity(intent1);
                 break;
             case R.id.kursi:
-                Intent intent3 = new Intent(getActivity(), ListChairActivity.class);
-                startActivity(intent3);
+                intent1.putExtra("id_jenis",3);
+                startActivity(intent1);
                 break;
             case R.id.dekorasi:
-                Intent intent4 = new Intent(getActivity(), ListDecorationActivity.class);
-                startActivity(intent4);
+                intent1.putExtra("id_jenis",4);
+                startActivity(intent1);
                 break;
             case R.id.penyimpanan:
-                Intent intent5 = new Intent(getActivity(), ListStorageActivity.class);
-                startActivity(intent5);
+                intent1.putExtra("id_jenis",5);
+                startActivity(intent1);
                 break;
             case R.id.furnitur:
-                Intent intent6 = new Intent(getActivity(), ListFurnitureActivity.class);
-                startActivity(intent6);
+                intent1.putExtra("id_jenis",6);
+                startActivity(intent1);
                 break;
             case R.id.kasur:
-                Intent intent7 = new Intent(getActivity(), ListBedActivity.class);
-                startActivity(intent7);
+                intent1.putExtra("id_jenis",7);
+                startActivity(intent1);
                 break;
             case R.id.elektronik:
-                Intent intent8 = new Intent(getActivity(), ListElectronicActivity.class);
-                startActivity(intent8);
+                intent1.putExtra("id_jenis",8);
+                startActivity(intent1);
                 break;
             case R.id.next:
                 Intent intent9 = new Intent(getActivity(), BestSellerActivity.class);

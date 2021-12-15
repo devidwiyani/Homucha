@@ -96,10 +96,9 @@ public class DbHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor readSpecCategory(String category){
+    public Cursor readSpecCategory(int category){
         String sql = "select * from "+table_produk+"" +
-                "INNER JOIN tb_kategori ON tb_produk.kategoriId = tb_kategori._id " +
-                "WHERE tb_kategori.nama = "+category;
+                " WHERE kategoriId = "+category;
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -202,7 +201,15 @@ public class DbHelper extends SQLiteOpenHelper {
         {
             checkSameInCart.moveToLast();
             dbWrite.execSQL("UPDATE tb_carting SET jumlahBeli = jumlahBeli + 1" +
-                    "WHERE _id = "+checkSameInCart.getInt(checkSameInCart.getColumnIndex("_id")));
+                    " WHERE _id = "+checkSameInCart.getInt(checkSameInCart.getColumnIndex("_id")));
         }
+    }
+    public Cursor getInCart(int id_user)
+    {
+        SQLiteDatabase dbRead = getReadableDatabase();
+        Cursor inCart = dbRead.rawQuery("SELECT*FROM tb_carting" +
+                " INNER JOIN tb_produk ON tb_carting.idProduk = tb_produk._id" +
+                " WHERE idUser ="+id_user,null);
+        return inCart;
     }
 }
