@@ -5,9 +5,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -41,6 +44,14 @@ public class CartActivity extends AppCompatActivity {
         adapter = new CartAdapter(productImageList, productNameList, productAmountList,getInCart);
         recyclerView.setAdapter(adapter);
         Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
+        Button makeOrder = findViewById(R.id.button_purchase);
+        makeOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toMakeOrder = new Intent(v.getContext(), com.example.homucha.makeOrder.class);
+                startActivity(toMakeOrder);
+            }
+        });
     }
 
     protected void getData(){
