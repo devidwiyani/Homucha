@@ -17,6 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ic_back"
         android:text="Register"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:textSize="17sp"/>
 
 </RelativeLayout>
