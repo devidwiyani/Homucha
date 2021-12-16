@@ -40,31 +40,32 @@ public class ListSofaActivity extends AppCompatActivity {
             }
         });
         Intent fromHome = getIntent();
-        switch (fromHome.getIntExtra("id_jenis",0))
+        int id_intent = fromHome.getIntExtra("id_jenis",0);
+        switch (id_intent)
         {
             case 1:
-                header.setText("sofa");
+                header.setText("sofa list");
                 break;
             case 2:
-                header.setText("meja");
+                header.setText("meja list");
                 break;
             case 3:
-                header.setText("kursi");
+                header.setText("kursi list");
                 break;
             case 4:
-                header.setText("dekorasi");
+                header.setText("dekorasi list");
                 break;
             case 5:
-                header.setText("lemari");
+                header.setText("lemari list");
                 break;
             case 6:
-                header.setText("furniture");
+                header.setText("furniture list");
                 break;
             case 7:
-                header.setText("kasur");
+                header.setText("kasur list");
                 break;
             case 8:
-                header.setText("elektronik");
+                header.setText("elektronik list");
                 break;
             default:
                 header.setText("No Data");
