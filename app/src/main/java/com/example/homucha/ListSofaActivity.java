@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class ListSofaActivity extends AppCompatActivity {
     RecyclerView daftarSofa;
     ArrayList<String> produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar;
     ProductAdapter productAdapter;
+    TextView header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +31,45 @@ public class ListSofaActivity extends AppCompatActivity {
         database = new DbHelper(this);
         daftarSofa = findViewById(R.id.daftarSofa);
         ImageView back = findViewById(R.id.back);
+        header = findViewById(R.id.header);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
+        Intent fromHome = getIntent();
+        switch (fromHome.getIntExtra("id_jenis",0))
+        {
+            case 1:
+                header.setText("sofa");
+                break;
+            case 2:
+                header.setText("meja");
+                break;
+            case 3:
+                header.setText("kursi");
+                break;
+            case 4:
+                header.setText("dekorasi");
+                break;
+            case 5:
+                header.setText("lemari");
+                break;
+            case 6:
+                header.setText("furniture");
+                break;
+            case 7:
+                header.setText("kasur");
+                break;
+            case 8:
+                header.setText("elektronik");
+                break;
+            default:
+                header.setText("No Data");
+                break;
+        }
         produk_id = new ArrayList<>();
         kategori_id = new ArrayList<>();
         produk_nama = new ArrayList<>();
@@ -44,7 +78,7 @@ public class ListSofaActivity extends AppCompatActivity {
         produk_gambar = new ArrayList<>();
 
         storeDataInArrays();
-        Intent fromHome = getIntent();
+
         if(fromHome.getIntExtra("id_jenis",0) == 0)
         {
             Toast.makeText(this, "I Cant Read Data. Please Refresh The App First", Toast.LENGTH_SHORT).show();
