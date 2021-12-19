@@ -38,6 +38,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
+        SQLiteDatabase dbRead = getReadableDatabase();
         String queryUser = "CREATE TABLE " + table_name + "(" + id_user + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + row_username + " TEXT," + row_password + " TEXT," + row_name + " TEXT,"
                 + row_address + " TEXT," + row_phone + " TEXT,"
@@ -71,7 +72,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 "idBarang INTEGER," +
                 "hargaSatuan FLOAT(20,2)," +
                 "jumlahBeli INTEGER)");
-        setKategoriBarang();
+        Cursor checkCategory = dbRead.rawQuery("SELECT*FROM tb_kategori",null);
+        if(checkCategory.getCount() == 0)
+        {
+            setKategoriBarang();
+        }
     }
 
     @Override
