@@ -38,7 +38,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        SQLiteDatabase dbRead = getReadableDatabase();
         String queryUser = "CREATE TABLE " + table_name + "(" + id_user + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + row_username + " TEXT," + row_password + " TEXT," + row_name + " TEXT,"
                 + row_address + " TEXT," + row_phone + " TEXT,"
@@ -72,11 +71,14 @@ public class DbHelper extends SQLiteOpenHelper {
                 "idBarang INTEGER," +
                 "hargaSatuan FLOAT(20,2)," +
                 "jumlahBeli INTEGER)");
-        Cursor checkCategory = dbRead.rawQuery("SELECT*FROM tb_kategori",null);
-        if(checkCategory.getCount() == 0)
-        {
-            setKategoriBarang();
-        }
+        database.execSQL("INSERT INTO tb_kategori VALUES(1,'sofa')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(2,'meja')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(3,'kursi')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(4,'dekorasi')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(5,'lemari')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
     }
 
     @Override
@@ -167,19 +169,6 @@ public class DbHelper extends SQLiteOpenHelper {
         Cursor check = dbRead.rawQuery("SELECT*FROM tb_user WHERE username = '"+username+"' AND password = '"+password+"'",null);
         check.moveToFirst();
         return check.getInt(check.getColumnIndex("_id"));
-    }
-
-    public void setKategoriBarang()
-    {
-        SQLiteDatabase dbWrite = getWritableDatabase();
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(1,'sofa')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(2,'meja')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(3,'kursi')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(4,'dekorasi')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(5,'lemari')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
-        dbWrite.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
     }
 
     public void insertCart(int id_user, int id_barang)
