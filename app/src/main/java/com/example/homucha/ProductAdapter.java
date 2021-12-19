@@ -51,6 +51,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //holder.product_image.setText(String.valueOf(produk_gambar.get(holder.getAdapterPosition())));
         listBarang.moveToPosition(position);
+        int id_barang = listBarang.getInt(listBarang.getColumnIndex("_id"));
         holder.product_name.setText(String.valueOf(produk_nama.get(position)));
         holder.product_price.setText(String.valueOf(produk_harga.get(position)));
         holder.product_image.setImageResource(listBarang.getInt(listBarang.getColumnIndex("gambar")));
@@ -59,13 +60,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ProductDetailActivity.class);
-                intent.putExtra("id", listBarang.getInt(listBarang.getColumnIndex("_id")));
-                intent.putExtra("ketegoriId", String.valueOf(kategori_id.get(positionReal)));
-                intent.putExtra("nama", String.valueOf(produk_nama.get(positionReal)));
-                intent.putExtra("harga", String.valueOf(produk_harga.get(positionReal)));
-                intent.putExtra("deskripsi", String.valueOf(produk_deskripsi.get(positionReal)));
-                intent.putExtra("gambar", String.valueOf(produk_gambar.get(positionReal)));
+                Intent intent = new Intent(view.getContext(), ProductDetailActivity.class);
+                intent.putExtra("id", id_barang);
                 activity.startActivity(intent);
             }
         });
