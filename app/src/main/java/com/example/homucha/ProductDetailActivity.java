@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ProductDetailActivity extends AppCompatActivity {
     TextView namaProduk, harga, deskripsi;
     int productId;
@@ -19,7 +22,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     sharedPrefManager spm;
     ImageView imageProduct;
     Intent intent;
-    Button addToCart;
+    FloatingActionButton addToCart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         deskripsi = findViewById(R.id.desc);
         imageProduct = findViewById(R.id.img1);
         ImageView back = findViewById(R.id.back);
-        addToCart = findViewById(R.id.addToCart);
+        Button addToCart = findViewById(R.id.addToCart);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

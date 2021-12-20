@@ -44,33 +44,37 @@ public class ListSofaActivity extends AppCompatActivity {
         switch (id_intent)
         {
             case 1:
-                header.setText("sofa list");
+                header.setText("Sofa List");
                 break;
             case 2:
-                header.setText("meja list");
+                header.setText("Table List");
                 break;
             case 3:
-                header.setText("kursi list");
+                header.setText("Chair List");
                 break;
             case 4:
-                header.setText("dekorasi list");
+                header.setText("Decoration List");
                 break;
             case 5:
-                header.setText("lemari list");
+                header.setText("Storage List");
                 break;
             case 6:
-                header.setText("furniture list");
+                header.setText("Furniture List");
                 break;
             case 7:
-                header.setText("kasur list");
+                header.setText("Bed List");
                 break;
             case 8:
-                header.setText("elektronik list");
+                header.setText("Electronic List");
+                break;
+            case 9:
+                header.setText("Best Seller");
                 break;
             default:
                 header.setText("No Data");
                 break;
         }
+
         produk_id = new ArrayList<>();
         kategori_id = new ArrayList<>();
         produk_nama = new ArrayList<>();
@@ -103,6 +107,7 @@ public class ListSofaActivity extends AppCompatActivity {
 
         }
     }
+//
     void storeDataInArrays(){
         Cursor cursor = database.readSofa();
         while (cursor.moveToNext()){

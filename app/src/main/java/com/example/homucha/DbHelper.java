@@ -79,6 +79,7 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
         database.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
         database.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(9,'bestseller')");
     }
 
     @Override
@@ -93,7 +94,104 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public Cursor readSofa(){
-        String sql = "select * from "+table_produk+" WHERE kategoriId = 1";
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 1";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readMeja(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 2";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readKursi(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 3";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readDekorasi(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 4";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readPenyimpanan(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 5";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readFurnitur(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 6";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readKasur(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 7";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readElektronik(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 8";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readBestSeller(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 9";
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -106,6 +204,18 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor readSpecCategory(int category){
         String sql = "select * from "+table_produk+"" +
                 " WHERE kategoriId = "+category;
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor homeBestSeller(int category){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = "+category+" LIMIT 4";
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
