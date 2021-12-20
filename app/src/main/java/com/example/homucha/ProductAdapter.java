@@ -52,8 +52,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         //holder.product_image.setText(String.valueOf(produk_gambar.get(holder.getAdapterPosition())));
         listBarang.moveToPosition(position);
         int id_barang = listBarang.getInt(listBarang.getColumnIndex("_id"));
-        holder.product_name.setText(String.valueOf(produk_nama.get(position)));
-        holder.product_price.setText(String.valueOf(produk_harga.get(position)));
+        holder.product_name.setText(listBarang.getString(listBarang.getColumnIndex("nama")));
+        holder.product_price.setText(String.valueOf(listBarang.getInt(listBarang.getColumnIndex("harga"))));
         holder.product_image.setImageResource(listBarang.getInt(listBarang.getColumnIndex("gambar")));
         int positionReal = position;
         //Recyclerview onClickListener
