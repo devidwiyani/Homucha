@@ -119,6 +119,9 @@ public class ListSofaActivity extends AppCompatActivity {
                 case 8:
                     cursor1 = database.readElektronik();
                     break;
+                case 9:
+                    cursor1 = database.readBestSeller();
+                    break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + id_jenis);
             }
