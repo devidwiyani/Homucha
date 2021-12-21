@@ -316,4 +316,18 @@ public class DbHelper extends SQLiteOpenHelper {
                 " WHERE idUser ="+id_user,null);
         return inCart;
     }
+    public int getSumHarga(int id_user){
+        SQLiteDatabase dbRead = getReadableDatabase();
+        Cursor inCart = dbRead.rawQuery("SELECT*FROM tb_carting" +
+                " INNER JOIN tb_produk ON tb_carting.idProduk = tb_produk._id" +
+                " WHERE idUser ="+id_user,null);
+        inCart.moveToFirst();
+        int totalHarga = 0;
+        for(int i = 0; i < inCart.getCount(); i++)
+        {
+            inCart.moveToPosition(i);
+            totalHarga = totalHarga + (inCart.getInt(inCart.getColumnIndex("harga"))*inCart.getInt(inCart.getColumnIndex("jumlahBeli")));
+        }
+        return totalHarga;
+    }
 }
