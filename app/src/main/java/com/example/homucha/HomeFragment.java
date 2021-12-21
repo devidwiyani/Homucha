@@ -2,6 +2,7 @@ package com.example.homucha;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -49,7 +50,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         kasur = v.findViewById(R.id.kasur);
         elektronik = v.findViewById(R.id.elektronik);
         next = v.findViewById(R.id.next);
-        bestseller = v.findViewById(R.id.bestseller);
+        bestseller = v.findViewById(R.id.bestSeller);
+        database = new DbHelper(v.getContext());
+        SQLiteDatabase dbRead = database.getReadableDatabase();
+        Cursor cursor1 = dbRead.rawQuery("SELECT*FROM tb_produk WHERE kategoriId = 9 LIMIT 2,2",null);
+        productAdapter = new ProductAdapter(getActivity(),v.getContext(), produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
+        bestseller.setAdapter(productAdapter);
+        bestseller.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(v.getContext(), 2, GridLayoutManager.VERTICAL, false);
+        bestseller.setLayoutManager(gridLayoutManager);
+        bestseller.setHasFixedSize(true);
 
         sofa.setOnClickListener(this);
         meja.setOnClickListener(this);
