@@ -1,7 +1,6 @@
 package com.example.homucha;
 
 import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,8 +57,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         ViewHolder(View itemView){
             super(itemView);
             productImage = itemView.findViewById(R.id.image_product);
-            productName = itemView.findViewById(R.id.nama_product);
-            productAmount =itemView.findViewById(R.id.amount_product);
+            productName = itemView.findViewById(R.id.nama_riwayat);
+            productAmount =itemView.findViewById(R.id.jumlah_beli);
 
         }
     }

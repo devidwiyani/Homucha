@@ -64,7 +64,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "hargaTotal FLOAT(20,2)," +
                 "jenisPembayaran VARCHAR(100)," +
                 "statusPembayaran VARCHAR(50)," +
-                "statusPengiriman VARCHAR(50))");
+                "statusPengiriman VARCHAR(50)," +
+                "tanggalPembelian DATETIME)");
         database.execSQL("CREATE TABLE det_pembelian(" +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "idPembelian INTEGER," +

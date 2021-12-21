@@ -18,7 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class makeOrder extends AppCompatActivity {
@@ -73,6 +75,7 @@ public class makeOrder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int id_pembelian;
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
                 Cursor checkPembelian = dbRead.rawQuery("SELECT*FROM tb_pembelian",null);
                 if(checkPembelian.getCount() == 0)
                 {
@@ -84,7 +87,8 @@ public class makeOrder extends AppCompatActivity {
                 }
                 dbWrite.execSQL("INSERT INTO tb_pembelian " +
                         "VALUES("+id_pembelian+","+idUser+",'"+alamat.getText()+"',"+dbHelper.getSumHarga(idUser)+"" +
-                        ",'"+listPembayaran.getSelectedItem().toString()+"','Lunas','Sedang Diantar')");
+                        ",'"+listPembayaran.getSelectedItem().toString()+"','Lunas','Sedang Diantar'" +
+                        ","+dateFormat.format(Calendar.getInstance().getTime())+")");
                 getInCart.moveToFirst();
                 int id_detail_pembelian;
                 Cursor getLastDetPembelian = dbRead.rawQuery("SELECT*FROM det_pembelian",null);
