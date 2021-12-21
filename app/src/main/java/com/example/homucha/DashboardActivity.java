@@ -158,108 +158,182 @@ public class DashboardActivity extends AppCompatActivity {
                 //PENYIMPANAN
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(25,5," +
                         "'BILLY',3299000," +
-                        "'Bookcase with glass-doors, grey-turquoise/white stained oak veneer, 80x30x202 cm. ',"+R.drawable.penyimpanan1+")");
+                        "'Bookcase with glass-doors, grey-turquoise/white stained oak veneer, 80x30x202 cm. Beloved classics are always in style. BILLY bookcase has been a favourite since the 1970s and now we’ve given it nice glass doors and new modern colours and materials – a real eye-catcher in the home.',"+R.drawable.penyimpanan1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(26,5," +
-                        "'HEMNES',2499000," +
-                        "'',"+R.drawable.penyimpanan2+")");
+                        "'HEMNES',2999000," +
+                        "'Bookcase, white stain/light brown, 90x198 cm. Sustainable beauty from sustainably-sourced solid pine, a natural and renewable material that gets more beautiful with each passing year. Like it? Combine with other products in the HEMNES series.',"+R.drawable.penyimpanan2+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(27,5," +
-                        "'LOMMARP',2499000," +
-                        "'',"+R.drawable.penyimpanan3+")");
+                        "'LOMMARP',4999000," +
+                        "'Cabinet, dark blue-green, 102x101 cm. This storage series is inspired by traditional carpentry, combining style and functions for today`s urban lifestyles. Use it wherever you need storage ― and mix with other furniture for a personal look.',"+R.drawable.penyimpanan3+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(28,5," +
-                        "'KRAGSTA',1499000," +
-                        "'',"+R.drawable.penyimpanan4+")");
+                        "'ERSNÄS',4999000," +
+                        "'Sideboard, birch effect, 180x79 cm. Thin clean lines, a natural birch look and solid wood details. With ERSNÄS sideboard you get the best of modern Scandinavian design – simple elegance, timeless quality and well-thought-out functionality.',"+R.drawable.penyimpanan4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(29,5," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.penyimpanan5+")");
+                        "'HEMNESY',5999000," +
+                        "'Glass-door cabinet with 3 drawers, white stain/light brown, 90x198 cm. Sustainable beauty from sustainably-sourced solid pine, a natural and renewable material that gets more beautiful with each passing year. Like it? Combine with other products in the HEMNES series.',"+R.drawable.penyimpanan5+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(30,5," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.penyimpanan6+")");
+                        "'BOLLY',3198000," +
+                        "'Bookcase, black-brown, 160x28x202 cm. It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive considering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.',"+R.drawable.penyimpanan6+")");
+
 
                 //FURNITUR
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(31,6," +
-                        "'ARKELSTORP',2999000," +
-                        "'',"+R.drawable.furnitur1+")");
+                        "'VARDAGEN',499000," +
+                        "'Panci dengan penutup, baja dienamel, 3 l. Anda dapat menggunakan panci ini dengan tutup di kompor dan oven, dan membawanya ke meja dan menyajikan makanan dari itu. Cara mudah untuk menyimpan sisa makanan Anda karena wadah makanan dapat disimpan di lemari es. Terbuat dari baja dilapis enamel, tahan lama, mudah dibersihkan dan menyebar panas dengan cepat dan rata, sehingga anda dapat mengatur suhu dengan mudah. Dengan penutup, masakan menjadi lebih cepat matang sehingga hemat waktu, energi dan pengeluaran serta mengurangi dampak terhadap lingkungan. Dapat digunakan untuk semua jenis kompor termasuk kompor induksi.',"+R.drawable.furnitur1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(32,6," +
-                        "'HEMNES',2499000," +
-                        "'',"+R.drawable.furnitur2+")");
+                        "'FÖRSLAG',199000," +
+                        "'3-piece knife set.',"+R.drawable.furnitur2+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(33,6," +
-                        "'LOMMARP',2499000," +
-                        "'',"+R.drawable.furnitur3+")");
+                        "'FRUKTKAKA',149000," +
+                        "'Wajan kadai, abu-abu, 24 cm. Panas paling tinggi di bagian bawah, dan sisi yang miring membuat makanan turun. Aduk terus hingga makanan renyah.\n" +
+                        "\n" +
+                        "Dua pegangan memudahkan untuk mengangkat panci.\n" +
+                        "\n" +
+                        "Dengan Teflon® Select, lapisan tahan lama anti lengket memungkinkan masak menggunakan sedikit lemak dan memudahkan pembersihan.\n" +
+                        "\n" +
+                        "Lapisan tidak melekat mengurangi resiko makanan hangus dan melekat.\n" +
+                        "\n" +
+                        "Terbuat dari aluminium, sehingga panas dapat disebarkan dengan rata dan hemat energi, memudahkan mengatur panas sehingga makanan tidak gosong dan melekat.',"+R.drawable.furnitur3+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(34,6," +
-                        "'KRAGSTA',1499000," +
-                        "'',"+R.drawable.furnitur4+")");
+                        "'HEMLAGAD',249000," +
+                        "'Panci saus dengan penutup, hitam, 2 l. Panci memiliki dinding dan dasar yang ekstra tebal, dapat menyalurkan panas dengan rata dan memberi hasil masakan yang baik.\n" +
+                        "\n" +
+                        "Gagang panci membuatnya mudah diangkat.\n" +
+                        "\n" +
+                        "Terbuat dari aluminium, sehingga panas dapat disebarkan dengan rata dan hemat energi, memudahkan mengatur panas sehingga makanan tidak gosong dan melekat.\n" +
+                        "\n" +
+                        "Dengan penutup, masakan menjadi lebih cepat matang sehingga hemat waktu, energi dan pengeluaran serta mengurangi dampak terhadap lingkungan.\n" +
+                        "\n" +
+                        "Dengan Teflon® Select, lapisan tahan lama anti lengket memungkinkan masak menggunakan sedikit lemak dan memudahkan pembersihan.\n" +
+                        "\n" +
+                        "Wajan yang ringan mudah ditangani saat terisi penuh dengan makanan.\n" +
+                        "\n" +
+                        "Saluran uap mengurangi tekanan sehingga makanan tidak mudah meluap.',"+R.drawable.furnitur4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(35,6," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.furnitur5+")");
+                        "'ANNONS',99900," +
+                        "'Panci dengan penutup, kaca/baja tahan karat, 2.8 l. Terbuat dari baja tahan karat, membuat panci tahan lama dan mudah dibersihkan.\n" +
+                        "\n" +
+                        "Penutup kaca memungkinkan anda melihat isi panci selama proses memasak.\n" +
+                        "\n" +
+                        "Dapat digunakan untuk semua jenis kompor termasuk kompor induksi.\n" +
+                        "\n" +
+                        "Bagian dasar memiliki satu lapisan aluminium diantara dua lapis baja tahan karat, sehingga panas merata dan mengurangi resiko makanan terbakar dan melekat.\n" +
+                        "\n" +
+                        "Dengan penutup, masakan menjadi lebih cepat matang sehingga hemat waktu, energi dan pengeluaran serta mengurangi dampak terhadap lingkungan.\n" +
+                        "\n" +
+                        "Lubang uap mengurangi tekanan sehingga makanan tidak mudah meluap.',"+R.drawable.furnitur5+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(36,6," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.furnitur6+")");
+                        "'KAVALKAD',129000," +
+                        "'Wajan penggorengan, set isi 2, hitam. Wajan yang ringan mudah ditangani saat terisi penuh dengan makanan.\n" +
+                        "\n" +
+                        "Gagang panci membuatnya mudah diangkat.\n" +
+                        "\n" +
+                        "Dengan Teflon® Classic lapisan non-stick yang memudahkan memasak dan pembersihan.\n" +
+                        "\n" +
+                        "Terbuat dari aluminium, sehingga panas dapat disebarkan dengan rata dan hemat energi, memudahkan mengatur panas sehingga makanan tidak gosong dan melekat.',"+R.drawable.furnitur6+")");
+
 
                 //TEMPAT TIDUR
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(37,7," +
-                        "'ARKELSTORP',2999000," +
-                        "'',"+R.drawable.bed1+")");
+                        "'TUFJORD',9999000," +
+                        "'Rangka tempat tidur berpelapis, djuparp hijau tua, 180x200 cm. Kepala ranjang melengkung sangat bagus untuk waktu tenang yang nyaman, membantu Anda bersantai dan rileks di tempat tidur.\n" +
+                        "\n" +
+                        "Anda dapat bersandar nyaman di kepala ranjang ini sambil minum kopi dan baca buku di pagi hari.\n" +
+                        "\n" +
+                        "Pelapisnya sangat pas di sekitar tempat tidur, membuatnya nyaman untuk dilihat dari segala sudut dan bagus untuk diletakkan di tengah ruangan.\n" +
+                        "\n" +
+                        "Pelapis beludru terasa lembut di kulit dan memiliki kilau yang indah.\n" +
+                        "\n" +
+                        "Velvet ditenun dari bahan rayon dan poliester sehingga membuatnya tahan lama.\n" +
+                        "\n" +
+                        "Kaki logam yang dibentuk sangat kuat dan stabil serta menambah karakter pada tempat tidur.',"+R.drawable.bed1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(38,7," +
-                        "'HEMNES',2499000," +
-                        "'',"+R.drawable.bed2+")");
+                        "'SAGSTUA',4399000," +
+                        "'Bed frame, white/luröy, 180x200 cm. A classic bed frame with a brass twist. The curved headboard and brass-coloured details soften the sturdy steel. Dressed with your favourite linens, it becomes a statement piece and your own personal haven.',"+R.drawable.bed2+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(39,7," +
-                        "'LOMMARP',2499000," +
-                        "'',"+R.drawable.bed3+")");
+                        "'IDANÄS',10199000," +
+                        "'Tempat tidur ottoman, gunnared pink pucat, 180x200 cm. Ruang penyimpanan di bawah tempat tidur menyimpan segalanya mulai dari quilt dan bantal hingga pakaian musiman. Atau kenapa tidak papan setrika?\n" +
+                        "\n" +
+                        "Detail tombol klasik membuat kepala tempat tidur menarik di kamar tidur mana pun.',"+R.drawable.bed3+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(40,7," +
-                        "'KRAGSTA',1499000," +
-                        "'',"+R.drawable.bed4+")");
+                        "'MALM',4899000," +
+                        "'Rangka tempat tidur, tinggi, veneer kayu oak diwarnai putih/luröy, 180x200 cm. Desain rapi dengan kayu solid veneer. Letakkan tempat tidur berdiri sendiri atau dengan kepala tempat tidur merapat ke dinding. Jika memerlukan tempat untuk seprai tambahan, tambahkan kotak tempat penyimpanan tempat tidur beroda MALM.',"+R.drawable.bed4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(41,7," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.bed5+")");
+                        "'LEIRVIK',3999000," +
+                        "'Rangka tempat tidur, putih/lönset, 180x200 cm. Jika Anda seorang yang romantis, Anda akan sulit menolak lekukan dekoratif dari baja putih ini. Pasangkan tempat tidur dengan tekstil dan bantal yang cantik serta nikmati mimpi Anda seperti akhir cerita dongeng.',"+R.drawable.bed5+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(42,7," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.bed6+")");
+                        "'HAUGA',3499000," +
+                        "'Rangka tempat tidur berpelapis, vissle abu-abu, 160x200 cm. Rangka tempat tidur berlapis ini menghadirkan kehangatan dan kelembutan ke kamar Anda. Kain dua warna tahan lama, sandaran kepala melengkung dengan lembut dan ujung pipanya menciptakan tampilan klasik yang akan Anda nikmati selama bertahun-tahun.',"+R.drawable.bed6+")");
+
 
                 //ELEKTRONIK
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(43,8," +
-                        "'ARKELSTORP',2999000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Coffee Maker',1039200," +
+                        "'Kels menghadirkan Coffee Maker Milano untuk Anda penikmat kopi. Alat ini memiliki fitur penyaring untuk mencegah bubuk kopi masuk ke dalam teko kaca, dengan katup anti tetes untuk mencegah tetesan kopi yang berlebih. Tangki untuk tempat air mudah dilepas agar lebih mudah dibersihkan. Tombol power ditempatkan di bagian yang mudah dijangkau dan dilengkapi lampu indikator. Coffee maker ini cocok untuk melengkapi dapur rumah atau pantry kantor.',"+R.drawable.elektronik1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(44,8," +
-                        "'HEMNES',2499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'LG Lemari Es',18889000," +
+                        "'Hadirkan lemari es LG di hunian ataupun usaha komersil Anda untuk membuat makanan dan minuman tetap terjaga kesegarannya. Lemari es 2 pintu side by side ini memilki kapasitas hingga 687 liter sehingga dapat memuat semua kebutuhan konsumsi Anda. Dilengkapi fitur Inverter Linear Compressor, lampu LED, wifi, serta tombol pada tampilan displaynya untuk menunjang kinerja lemari es agar semakin maksimal.',"+R.drawable.elektronik2+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(45,8," +
-                        "'LOMMARP',2499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Sahara Dispenser',2499000," +
+                        "'Permudah akses mengambil air minum di rumah dengan menggunakan dispenser dari Kels. Dispenser ini memiliki 3 mode suhu air, yaitu dingin, nromal dan panass. Dengan kompartemen galon pada bagian bawah, dapat menghemat tenaga dan juga waktu saat mengganti galon. Dispenser ini hadir dengan nuansa warna rosegold yang elegan.',"+R.drawable.elektronik3+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(46,8," +
-                        "'KRAGSTA',1499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'LG AC',5019000," +
+                        "'Hadirkan kesejukan dan kenyamanan di hunian Anda dengan pendingin udara dari LG. Memiliki fitur Dual Inverter, AC ini menghemat lebih banyak listrik dibanding kompresor biasa. Dilengkapi dengan teknologi Watt Control dan Low Noise, jadikan AC dari LG ini sebagai pilihan terbaik untuk kebutuhan Anda.',"+R.drawable.elektronik4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(47,8," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Harbey Toaster',359000," +
+                        "'Membuat roti panggang jadi lebih mudah dengan toaster dari Kels. Anda bisa mengatur tingkat kematangan sesuai selera dengan hanya menggunakan satu tombol. Selain untuk memanggang, alat ini bisa juga untuk menghangatkan roti. Di bagian bawah alat, terdapat nampan untuk menampung remahan roti agar meja tetap bersih.',"+R.drawable.elektronik5+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(48,8," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Harbey Blender',579000," +
+                        "'Blender dari Appetite akan membantu Anda menyiapkan berbagai racikan dengan tekstur yang sesuai kebutuhan. Terdapat 3 level kekuatan blender yang bisa disesuaikan dengan bahan makanan atau buah dan sayur yang sedang diolah. Tutup blender rapat sehingga mencegah cairan keluar dari jar. Blender didesain dengan dominasi warna hitam dan silver yang akan menambah kesan modern. Kegiatan memasak semakin mudah dan menyenangkan dengan kehadiran Harbey Blender dari Appetite Electrical.',"+R.drawable.elektronik6+")");
 
                 //BEST SELLER
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(49,9," +
-                        "'ARKELSTORP',2999000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Ivaro',3350000," +
+                        "'Bantal dudukan dan sandaran memberi penyangga yang nyaman untuk tubuh anda dan dengan mudah mendapatkan kembali bentuknya karena berisi busa berketahanan tinggi dan serat polyester.',"+R.drawable.sofa3+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(50,9," +
-                        "'HEMNES',2499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'TUFJORD',9999000," +
+                        "'Rangka tempat tidur berpelapis, djuparp hijau tua, 180x200 cm. Kepala ranjang melengkung sangat bagus untuk waktu tenang yang nyaman, membantu Anda bersantai dan rileks di tempat tidur.\n" +
+                        "\n" +
+                        "Anda dapat bersandar nyaman di kepala ranjang ini sambil minum kopi dan baca buku di pagi hari.\n" +
+                        "\n" +
+                        "Pelapisnya sangat pas di sekitar tempat tidur, membuatnya nyaman untuk dilihat dari segala sudut dan bagus untuk diletakkan di tengah ruangan.\n" +
+                        "\n" +
+                        "Pelapis beludru terasa lembut di kulit dan memiliki kilau yang indah.\n" +
+                        "\n" +
+                        "Velvet ditenun dari bahan rayon dan poliester sehingga membuatnya tahan lama.\n" +
+                        "\n" +
+                        "Kaki logam yang dibentuk sangat kuat dan stabil serta menambah karakter pada tempat tidur.',"+R.drawable.bed1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(51,9," +
-                        "'LOMMARP',2499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'FEJKA',49900," +
+                        "'Tanaman tiruan dalam pot, dalam/luar ruang digantung/peperomia, 9 cm. FEJKA tanaman pot tiruan yang tidak membutuhkan keahlian berkebun. Sangat cocok bagi Anda tidak punya waktu untuk menyiram tanaman dan membersihkan daun-daun kering. Semua orang akan tertipu karena tanaman ini terlihat serupa.',"+R.drawable.dekorasi1+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(52,9," +
-                        "'KRAGSTA',1499000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'KAVALKAD',129000," +
+                        "'Wajan penggorengan, set isi 2, hitam. Wajan yang ringan mudah ditangani saat terisi penuh dengan makanan.\n" +
+                        "\n" +
+                        "Gagang panci membuatnya mudah diangkat.\n" +
+                        "\n" +
+                        "Dengan Teflon® Classic lapisan non-stick yang memudahkan memasak dan pembersihan.\n" +
+                        "\n" +
+                        "Terbuat dari aluminium, sehingga panas dapat disebarkan dengan rata dan hemat energi, memudahkan mengatur panas sehingga makanan tidak gosong dan melekat.',"+R.drawable.furnitur6+")");
+
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(53,9," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'LOBERGET',498900," +
+                        "'Kursi putar dengan alas , putih/krem. Anda dapat duduk dengan nyaman karena ketinggian kursi dapat disesuaikan.\n" +
+                        "\n" +
+                        "Roda pengaman memiliki mekanisme rem sensitif tekanan yang menjaga kursi tetap di tempat saat Anda berdiri dan bergerak lagi saat duduk.\n" +
+                        "\n" +
+                        "Mudah dibersihkan hanya dengan menggunakan lap basah.\n" +
+                        "\n" +
+                        "Untuk menyesuaikan ketinggian kursi, putar kursi ke atas atau ke bawah.',"+R.drawable.kursi4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(54,9," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'HEMNES',2499000," +
+                        "'Meja tamu, warna putih/cokelat muda, 90x90 cm. Keindahan alami kayu pinus solid. Bahan yang tahan lama dan terbarukan yang menjaga keaslian karakternya setiap tahunnya. Terlihat cocok dikombinasikan dengan perabotan lainnya dari seri HEMNES.',"+R.drawable.meja2+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(55,9," +
-                        "'NORDVIKEN',5999000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'ERSNÄS',4999000," +
+                        "'Sideboard, birch effect, 180x79 cm. Thin clean lines, a natural birch look and solid wood details. With ERSNÄS sideboard you get the best of modern Scandinavian design – simple elegance, timeless quality and well-thought-out functionality.',"+R.drawable.penyimpanan4+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(56,9," +
-                        "'VEBJÖRN',3799000," +
-                        "'',"+R.drawable.meja2+")");
+                        "'Coffee Maker',1039200," +
+                        "'Kels menghadirkan Coffee Maker Milano untuk Anda penikmat kopi. Alat ini memiliki fitur penyaring untuk mencegah bubuk kopi masuk ke dalam teko kaca, dengan katup anti tetes untuk mencegah tetesan kopi yang berlebih. Tangki untuk tempat air mudah dilepas agar lebih mudah dibersihkan. Tombol power ditempatkan di bagian yang mudah dijangkau dan dilengkapi lampu indikator. Coffee maker ini cocok untuk melengkapi dapur rumah atau pantry kantor.',"+R.drawable.elektronik1+")");
             }
             bundleFragment = new Bundle();
             bundleFragment.putString("sendName", "name");
