@@ -42,7 +42,7 @@ public class CartActivity extends AppCompatActivity {
         adapter = new CartAdapter(productImageList, productNameList, productAmountList,getInCart);
         recyclerView.setAdapter(adapter);
         Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
-        Button makeOrder = findViewById(R.id.button_purchase);
+        Button makeOrder = findViewById(R.id.button_finish);
         makeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

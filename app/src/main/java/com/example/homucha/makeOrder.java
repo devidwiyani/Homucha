@@ -70,7 +70,7 @@ public class makeOrder extends AppCompatActivity {
         Locale indonesia = new Locale("in","ID");
         NumberFormat toIndonesia = NumberFormat.getCurrencyInstance(indonesia);
         hargaTotal.setText(toIndonesia.format(dbHelper.getSumHarga(idUser)));
-        Button purchase = findViewById(R.id.button_purchase);
+        Button purchase = findViewById(R.id.button_finish);
         purchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

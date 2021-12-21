@@ -64,7 +64,7 @@ public class DashboardActivity extends AppCompatActivity {
                 //SOFA
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(1,1," +
                         "'CASABEL Estrella',19400000," +
-                        "'ÄPPLARYD sofa will be your home’s comfy oasis. An eye-catcher that reflects your personality and style. Great to sit, lie down and hang out on. And with lots of space for the whole family, year after year.',"+R.drawable.sofa1+")");
+                        "'ÄPPLARYD sofa will be your home’s comfy oasis. An eye-catcher that reflects your personality and style. Great to sit, lie down and hang out on. And with lots of space for the whole family, year after year.',"+R.drawable.sofa_hitam+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(2,1," +
                         "'Ebonia',2825000," +
                         "'Teman terbaik Anda untuk menonton film dan juga pusat perhatian dari ruangan. Kami mencoba memikirkan segalanya. Dari dudukan yang luas dan nyaman hingga sandaran lengan yang membulat dan sarung penutup yang lembut.',"+R.drawable.sofa2+")");
