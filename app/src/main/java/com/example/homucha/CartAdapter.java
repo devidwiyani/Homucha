@@ -1,9 +1,11 @@
 package com.example.homucha;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -31,6 +33,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private Cursor listBarang;
     private ImageButton btnDelete;
     DbHelper dbHelper;
+    public Context parentCursor;
 
     public CartAdapter(ArrayList productImageList, ArrayList productNameList, ArrayList productAmountList, ArrayList productPriceList, Cursor cursor){
         this.productImageList = productImageList;
@@ -44,6 +47,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cart, parent, false);
+        parentCursor = parent.getContext();
         return new ViewHolder(v);
     }
 
@@ -53,6 +57,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         //final String productName = (String) productNameList.get(position);
         //final String productAmount = (String) productAmountList.get(position);
         listBarang.moveToPosition(position);
+        int id = listBarang.getInt(listBarang.getColumnIndex("idInCart"));
         holder.productImage.setImageResource(listBarang.getInt(listBarang.getColumnIndex("gambar")));
         holder.productName.setText(listBarang.getString(listBarang.getColumnIndex("nama")));
         holder.productAmount.setText(listBarang.getString(listBarang.getColumnIndex("jumlahBeli")));
@@ -63,12 +68,24 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
                 Intent i = new Intent(v.getContext(), UpdateCartActivity.class);
 
-                i.putExtra("id", listBarang.getString(listBarang.getInt(0)));
+                i.putExtra("id", id);
                 i.putExtra("produkName", listBarang.getString(listBarang.getColumnIndex("nama")));
                 i.putExtra("produkJumlah", listBarang.getString(listBarang.getColumnIndex("jumlahBeli")));
                 i.putExtra("produkHarga", listBarang.getString(listBarang.getColumnIndex("harga")));
 
                 v.getContext().startActivity(i);
+            }
+        });
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbHelper = new DbHelper(parentCursor);
+                SQLiteDatabase dbRead = dbHelper.getWritableDatabase();
+                dbRead.execSQL("DELETE FROM tb_carting WHERE _id = "+id);
+                Toast.makeText(v.getContext(), "ID Cart deleted :" +id, Toast.LENGTH_SHORT).show();
+                Intent refreshCart = new Intent(v.getContext(), CartActivity.class);
+                v.getContext().startActivity(refreshCart);
+                ((Activity)v.getContext()).finish();
             }
         });
     }
@@ -82,7 +99,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         private ImageView productImage;
         private TextView productName, productAmount, productPrice;
-        DbHelper dbHelper;
+
+        ImageButton btnDelete;
 
         ViewHolder(View itemView){
             super(itemView);
@@ -92,18 +110,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             productPrice = itemView.findViewById(R.id.harga_bayar);
             dbHelper = new DbHelper(itemView.getContext());
             btnDelete = itemView.findViewById(R.id.btn_delete);
-            btnDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int id = listBarang.getInt(0);
-                    dbHelper.deleteCart(id);
-                    Toast.makeText(v.getContext(), "ID Cart deleted :" +id, Toast.LENGTH_SHORT).show();
-                    Intent refreshCart = new Intent(v.getContext(), CartActivity.class);
-                    v.getContext().startActivity(refreshCart);
-                    ((Activity)v.getContext()).finish();
-                }
-            });
-
         }
     }
 

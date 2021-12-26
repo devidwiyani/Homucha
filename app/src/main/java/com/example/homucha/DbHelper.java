@@ -315,7 +315,15 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor getInCart(int id_user)
     {
         SQLiteDatabase dbRead = getReadableDatabase();
-        Cursor inCart = dbRead.rawQuery("SELECT*FROM tb_carting" +
+        Cursor inCart = dbRead.rawQuery("SELECT" +
+                " tb_carting._id AS 'idInCart'," +
+                " tb_carting.idUser," +
+                " tb_carting.idProduk," +
+                " tb_produk.nama," +
+                " tb_produk.harga," +
+                " tb_produk.gambar," +
+                " tb_carting.jumlahBeli" +
+                " FROM tb_carting" +
                 " INNER JOIN tb_produk ON tb_carting.idProduk = tb_produk._id" +
                 " WHERE idUser ="+id_user,null);
         return inCart;

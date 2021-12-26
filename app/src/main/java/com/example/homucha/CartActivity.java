@@ -59,7 +59,7 @@ public class CartActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         adapter = new CartAdapter(productImageList, productNameList, productAmountList, productPriceList,getInCart);
         recyclerView.setAdapter(adapter);
-        Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
         makeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,4 +80,10 @@ public class CartActivity extends AppCompatActivity {
 //        }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent refreshCart = new Intent(this, DashboardActivity.class);
+        startActivity(refreshCart);
+    }
 }
