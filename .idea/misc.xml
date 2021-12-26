@@ -28,6 +28,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_chair.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_sofa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_storage.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_table.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_make_order.xml" value="0.25416666666666665" />
@@ -58,7 +59,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_profile_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_profile.xml" value="0.13405797101449277" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_single_row.xml" value="0.4" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_single_row.xml" value="0.264" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_cart.xml" value="0.18" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_list_bed.xml" value="0.14266304347826086" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_list_sofa.xml" value="0.25" />

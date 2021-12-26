@@ -21,6 +21,7 @@ public class CartActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CartAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
+    Button makeOrder;
     private ArrayList productImageList;
     private ArrayList productNameList;
     private ArrayList productAmountList;
@@ -30,6 +31,7 @@ public class CartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+        makeOrder = findViewById(R.id.button_finish);
 
         ImageView back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +50,17 @@ public class CartActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.daftarRiwayat);
         getData();
         Cursor getInCart = database.getInCart(idUser);
+        int x = getInCart.getCount();
+//        Toast.makeText(CartActivity.this, "Jumlah : " +x, Toast.LENGTH_SHORT).show();
+        if (x == 0){
+            makeOrder.setVisibility(View.GONE);
+        }
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         adapter = new CartAdapter(productImageList, productNameList, productAmountList, productPriceList,getInCart);
         recyclerView.setAdapter(adapter);
         Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
-        Button makeOrder = findViewById(R.id.button_finish);
         makeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

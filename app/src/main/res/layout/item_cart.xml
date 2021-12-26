@@ -35,6 +35,13 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/harga_bayar"
+                android:text="Rp. "/>
+
+            <TextView
                 android:id="@+id/harga_bayar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

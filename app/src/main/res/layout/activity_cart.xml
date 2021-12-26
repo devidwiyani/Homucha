@@ -32,6 +32,7 @@
             android:layout_toRightOf="@id/back"
             android:text="My Cart"
             android:textSize="18sp"
+            android:textColor="@color/coklat"
             android:textStyle="bold" />
 
     </RelativeLayout>
@@ -57,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="16dp"
+            android:visibility="visible"
             android:layout_gravity="center|bottom"
             android:gravity="center"
             android:text="MAKE ORDER"

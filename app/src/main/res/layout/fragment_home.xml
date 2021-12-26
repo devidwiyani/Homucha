@@ -340,7 +340,6 @@
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/item_single_row"/>
 
-
         </LinearLayout>
 
     </ScrollView>

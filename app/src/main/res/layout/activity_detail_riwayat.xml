@@ -32,6 +32,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/back"
             android:text="My Shop History"
+            android:textColor="@color/coklat"
             android:textSize="18sp"
             android:textStyle="bold" />
     </RelativeLayout>
