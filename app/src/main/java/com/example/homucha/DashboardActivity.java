@@ -58,7 +58,7 @@ public class DashboardActivity extends AppCompatActivity {
                 address = cursor.getString(4).toString();
                 phone = cursor.getString(5).toString();
             }
-            Cursor checkItem = db.rawQuery("SELECT*FROM tb_produk",null);
+            Cursor checkItem = db.rawQuery("SELECT * FROM tb_produk",null);
             if(checkItem.getCount() == 0)
             {
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(1,1," +

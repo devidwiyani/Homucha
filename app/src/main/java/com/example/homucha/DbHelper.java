@@ -89,6 +89,7 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL("DROP TABLE IF EXISTS tb_carting");
         database.execSQL("DROP TABLE IF EXISTS tb_pembelian");
         database.execSQL("DROP TABLE IF EXISTS det_pembelian");
+        database.execSQL("DROP TABLE IF EXISTS tb_order");
         onCreate(database);
     }
 
@@ -205,5 +206,16 @@ public class DbHelper extends SQLiteOpenHelper {
                 " INNER JOIN tb_produk ON tb_carting.idProduk = tb_produk._id" +
                 " WHERE idUser ="+id_user,null);
         return inCart;
+    }
+
+    public Cursor readOrder(){
+        String sql = "select * from tb_carting" + "WHERE status_pembelian = 1";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
     }
 }
