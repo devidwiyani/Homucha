@@ -35,6 +35,7 @@ public class makeOrder extends AppCompatActivity {
     private ArrayList productImageList;
     private ArrayList productNameList;
     private ArrayList productAmountList;
+    private ArrayList productPriceList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +65,7 @@ public class makeOrder extends AppCompatActivity {
         productImageList = new ArrayList();
         productNameList = new ArrayList();
         productAmountList = new ArrayList();
-        CartAdapter adapter1 = new CartAdapter(productImageList, productNameList, productAmountList,getInCart);
+        CartAdapter adapter1 = new CartAdapter(productImageList, productNameList, productAmountList, productPriceList,getInCart);
         listInCart.setAdapter(adapter1);
         hargaTotal = findViewById(R.id.totalHarga);
         Locale indonesia = new Locale("in","ID");

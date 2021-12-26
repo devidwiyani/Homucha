@@ -36,102 +36,185 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <LinearLayout
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginHorizontal="5dp"
+        style="@style/CardView.Light">
 
-        <TextView
-            android:id="@+id/textView9"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Alamat Pengiriman" />
+            android:paddingVertical="10dp"
+            android:paddingBottom="12dp">
 
-        <TextView
-            android:id="@+id/alamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Total Harga" />
+            <ImageView
+                android:id="@+id/im_foxclub"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_local_shipping" />
 
-        <TextView
-            android:id="@+id/total_harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="TextView" />
+            <TextView
+                android:id="@+id/desc"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/im_foxclub"
+                android:text="DELIVERY DETAILS"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="status pembayaran" />
+            <ImageButton
+                android:id="@+id/arrowBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ic_expand_more" />
 
-        <TextView
-            android:id="@+id/status_pembayaran"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="TextView" />
+            <RelativeLayout
+                android:id="@+id/expandableView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/arrowBtn"
+                android:paddingHorizontal="13dp"
+                android:visibility="gone"
+                android:layout_marginTop="12dp">
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Status Pengiriman" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/status_pengiriman"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="TextView" />
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ALAMAT PENGIRIMAN"
+                        android:textStyle="bold"
+                        android:textColor="@color/coklat"
+                        android:textSize="15sp"/>
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tanggal Transaksi" />
+                    <TextView
+                        android:id="@+id/alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="13sp"/>
 
-        <TextView
-            android:id="@+id/tanggal_transaksi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="TextView" />
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL HARGA"
+                        android:textStyle="bold"
+                        android:textColor="@color/coklat"
+                        android:textSize="15sp"/>
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="List Barang Pembelian" />
+                    <TextView
+                        android:id="@+id/total_harga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="13sp"/>
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STATUS PEMBAYARAN"
+                        android:textStyle="bold"
+                        android:textColor="@color/coklat"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/status_pembayaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STATUS PENGIRIMAN"
+                        android:textStyle="bold"
+                        android:textColor="@color/coklat"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/status_pengiriman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TANGGAL TRANSAKSI"
+                        android:textStyle="bold"
+                        android:textColor="@color/coklat"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tanggal_transaksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="LIST PEMBELIAN BARANG"
+        android:background="@color/abuTua"
+        android:textColor="@color/coklat"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"/>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listBarangTerbeli"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
+
+        </ScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/button_finish"
