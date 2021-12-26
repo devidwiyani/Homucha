@@ -84,7 +84,8 @@ public class makeOrder extends AppCompatActivity {
                 }
                 else
                 {
-                    id_pembelian = getInCart.getCount() + 1;
+                    checkPembelian.moveToLast();
+                    id_pembelian = checkPembelian.getInt(checkPembelian.getColumnIndex("_id")) + 1;
                 }
                 dbWrite.execSQL("INSERT INTO tb_pembelian " +
                         "VALUES("+id_pembelian+","+idUser+",'"+alamat.getText()+"',"+dbHelper.getSumHarga(idUser)+"" +
