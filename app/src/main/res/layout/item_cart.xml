@@ -62,7 +62,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_delete"
-                android:background="#0000000"
+                android:background="@android:color/transparent"
                 android:textSize="5sp" />
 
             <TextView

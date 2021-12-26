@@ -1,5 +1,6 @@
 package com.example.homucha;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -97,6 +98,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                     int id = listBarang.getInt(0);
                     dbHelper.deleteCart(id);
                     Toast.makeText(v.getContext(), "ID Cart deleted :" +id, Toast.LENGTH_SHORT).show();
+                    Intent refreshCart = new Intent(v.getContext(), CartActivity.class);
+                    v.getContext().startActivity(refreshCart);
+                    ((Activity)v.getContext()).finish();
                 }
             });
 
