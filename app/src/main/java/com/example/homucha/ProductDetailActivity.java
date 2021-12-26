@@ -22,7 +22,6 @@ public class ProductDetailActivity extends AppCompatActivity {
     sharedPrefManager spm;
     ImageView imageProduct;
     Intent intent;
-    FloatingActionButton addToCart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

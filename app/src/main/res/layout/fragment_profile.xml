@@ -27,6 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="20dp">
+
                     <ImageView
                         android:id="@+id/image"
                         android:layout_width="75dp"
@@ -176,9 +177,7 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="20dp"
-                        android:src="@drawable/ic_shopping_cart"
-                        app:tint="#000000"
-                        app:srcCompat="@drawable/ic_baseline_shopping_bag_24" />
+                        android:src="@drawable/ic_baseline_shopping_bag_24"/>
 
                     <TextView
                         android:layout_width="wrap_content"

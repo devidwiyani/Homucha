@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         {
             Intent toDashboard = new Intent(LoginActivity.this,DashboardActivity.class);
             startActivity(toDashboard);
-
         }
         logUsername = findViewById(R.id.inUsername);
         logPassword = findViewById(R.id.inPassword);

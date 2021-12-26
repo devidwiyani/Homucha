@@ -22,6 +22,7 @@ public class riwayatBelanja extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riwayat_belanja);
+
         listBarang = findViewById(R.id.daftarRiwayat);
         ImageView back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {

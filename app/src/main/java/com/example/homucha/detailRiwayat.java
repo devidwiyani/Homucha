@@ -2,6 +2,7 @@ package com.example.homucha;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,8 +11,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +34,43 @@ public class detailRiwayat extends AppCompatActivity {
     Button finish;
     detailRiwayatAdapter detailRiwayatAdapter;
     RecyclerView.LayoutManager layoutManager;
+    RelativeLayout expandableView;
+    ImageButton arrowBtn;
+    CardView cardView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_riwayat);
         DbHelper dataHelper = new DbHelper(this);
+
+        expandableView = findViewById(R.id.expandableView);
+        arrowBtn = findViewById(R.id.arrowBtn);
+        cardView = findViewById(R.id.cardView);
+
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        arrowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expandableView.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                    expandableView.setVisibility(View.VISIBLE);
+                    arrowBtn.setBackgroundResource(R.drawable.ic_expand_more);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                    expandableView.setVisibility(View.GONE);
+                    arrowBtn.setBackgroundResource(R.drawable.ic_expand_less);
+                }
+            }
+        });
+
         SQLiteDatabase dbRead = dataHelper.getReadableDatabase();
         SQLiteDatabase dbWrite = dataHelper.getWritableDatabase();
         alamat = findViewById(R.id.alamat);

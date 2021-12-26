@@ -58,12 +58,12 @@ public class DashboardActivity extends AppCompatActivity {
                 address = cursor.getString(4).toString();
                 phone = cursor.getString(5).toString();
             }
-            Cursor checkItem = db.rawQuery("SELECT*FROM tb_produk",null);
+            Cursor checkItem = db.rawQuery("SELECT * FROM tb_produk",null);
             if(checkItem.getCount() == 0)
             {
                 //SOFA
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(1,1," +
-                        "'CASABEL Estrella',19400000," +
+                        "'CASABEL Estrella', 19400000," +
                         "'ÄPPLARYD sofa will be your home’s comfy oasis. An eye-catcher that reflects your personality and style. Great to sit, lie down and hang out on. And with lots of space for the whole family, year after year.',"+R.drawable.sofa_hitam+")");
                 dbWrite.execSQL("INSERT INTO tb_produk VALUES(2,1," +
                         "'Ebonia',2825000," +

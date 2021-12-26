@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         bestseller = v.findViewById(R.id.bestSeller);
         database = new DbHelper(v.getContext());
         SQLiteDatabase dbRead = database.getReadableDatabase();
-        Cursor cursor1 = dbRead.rawQuery("SELECT*FROM tb_produk WHERE kategoriId = 9 LIMIT 2,2",null);
+        Cursor cursor1 = dbRead.rawQuery("SELECT*FROM tb_produk WHERE kategoriId = 9 limit 4",null);
         productAdapter = new ProductAdapter(getActivity(),v.getContext(), produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
         bestseller.setAdapter(productAdapter);
         bestseller.setLayoutManager(new LinearLayoutManager(v.getContext()));

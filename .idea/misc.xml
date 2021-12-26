@@ -7,36 +7,48 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable-v24/ic_phone.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/bg_edittext.xml" value="0.23333333333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/bg_text.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/frame.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_address.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_arrow_drop.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_arrow_drop_up.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_back.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_badge.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_chevron_right.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_email.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_expand_more.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_facebook.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_name.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_password.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_phone.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_cart.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_detail_riwayat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_chair.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_sofa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_storage.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_table.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_make_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_product_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_riwayat_belanja.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_cart_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_profile_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/back_toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_home.xml" value="0.2462962962962963" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_produk.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_cart.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_riwayat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_single_row.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Homucha/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_back.xml" value="0.2703125" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/drawable/ic_next.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_best_seller.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_cart.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_bed.xml" value="0.13451086956521738" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_chair.xml" value="0.13451086956521738" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_decoration.xml" value="0.13451086956521738" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_electronic.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_furniture.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_sofa.xml" value="0.1" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/activity_list_storage.xml" value="0.13405797101449277" />
@@ -49,19 +61,14 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/fragment_profile.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Homucha/app/src/main/res/layout/item_single_row.xml" value="0.264" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_cart.xml" value="0.18" />
-        <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_dashboard.xml" value="0.11458333333333333" />
-        <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_detail_riwayat.xml" value="0.22" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_list_bed.xml" value="0.14266304347826086" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_list_sofa.xml" value="0.25" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_main2.xml" value="0.12635869565217392" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_make_order.xml" value="0.25" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_product_detail.xml" value="0.18" />
-        <entry key="..\:/pratikum/homucha/app/src/main/res/layout/activity_riwayat_belanja.xml" value="0.18" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/back_profile_toolbar.xml" value="0.13179347826086957" />
-        <entry key="..\:/pratikum/homucha/app/src/main/res/layout/fragment_home.xml" value="0.11458333333333333" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/item_cart.xml" value="0.33" />
-        <entry key="..\:/pratikum/homucha/app/src/main/res/layout/item_riwayat.xml" value="0.2" />
         <entry key="..\:/pratikum/homucha/app/src/main/res/layout/item_single_row.xml" value="0.22" />
       </map>
     </option>

@@ -17,12 +17,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private ArrayList productImageList;
     private ArrayList productNameList;
     private ArrayList productAmountList;
+    private ArrayList productPriceList;
     private Cursor listBarang;
 
-    public CartAdapter(ArrayList productImageList, ArrayList productNameList, ArrayList productAmountList, Cursor cursor){
+    public CartAdapter(ArrayList productImageList, ArrayList productNameList, ArrayList productAmountList, ArrayList productPriceList, Cursor cursor){
         this.productImageList = productImageList;
         this.productNameList = productNameList;
         this.productAmountList = productAmountList;
+        this.productPriceList = productPriceList;
         this.listBarang = cursor;
     }
 
@@ -42,6 +44,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         holder.productImage.setImageResource(listBarang.getInt(listBarang.getColumnIndex("gambar")));
         holder.productName.setText(listBarang.getString(listBarang.getColumnIndex("nama")));
         holder.productAmount.setText(listBarang.getString(listBarang.getColumnIndex("jumlahBeli")));
+        holder.productPrice.setText(listBarang.getString(listBarang.getColumnIndex("harga")));
     }
 
     @Override
@@ -52,13 +55,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView productImage;
-        private TextView productName, productAmount;
+        private TextView productName, productAmount, productPrice;
 
         ViewHolder(View itemView){
             super(itemView);
             productImage = itemView.findViewById(R.id.image_product);
             productName = itemView.findViewById(R.id.nama_riwayat);
             productAmount =itemView.findViewById(R.id.jumlah_beli);
+            productPrice = itemView.findViewById(R.id.harga_bayar);
 
         }
     }
