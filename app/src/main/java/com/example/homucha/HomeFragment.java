@@ -1,6 +1,8 @@
 package com.example.homucha;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,14 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
+
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
@@ -23,6 +31,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     int[] sampleImages = {R.drawable.ce1, R.drawable.ce2, R.drawable.ce3};
     CardView sofa, meja, kursi, dekorasi, penyimpanan, furnitur, kasur, elektronik;
     ImageButton next;
+    RecyclerView bestseller;
+    DbHelper database;
+    ArrayList<String> produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar;
+    ProductAdapter productAdapter;
 
     @Nullable
     @Override
@@ -38,6 +50,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         kasur = v.findViewById(R.id.kasur);
         elektronik = v.findViewById(R.id.elektronik);
         next = v.findViewById(R.id.next);
+        bestseller = v.findViewById(R.id.bestSeller);
+        database = new DbHelper(v.getContext());
+        SQLiteDatabase dbRead = database.getReadableDatabase();
+        Cursor cursor1 = dbRead.rawQuery("SELECT*FROM tb_produk WHERE kategoriId = 9 LIMIT 2,2",null);
+        productAdapter = new ProductAdapter(getActivity(),v.getContext(), produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
+        bestseller.setAdapter(productAdapter);
+        bestseller.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(v.getContext(), 2, GridLayoutManager.VERTICAL, false);
+        bestseller.setLayoutManager(gridLayoutManager);
+        bestseller.setHasFixedSize(true);
 
         sofa.setOnClickListener(this);
         meja.setOnClickListener(this);
@@ -61,6 +83,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         carouselView.setImageListener(imageListener);
 
         return v;
+
+
+//        productAdapter = new ProductAdapter(BestSellerActivity.this,this, produk_id, kategori_id, produk_nama, produk_harga, produk_deskripsi, produk_gambar, cursor1);
+//        bestseller.setAdapter(productAdapter);
+//        bestseller.setLayoutManager(new LinearLayoutManager(this));
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+//        bestseller.setLayoutManager(gridLayoutManager);
+//        bestseller.setHasFixedSize(true);
 
     }
 
@@ -101,8 +131,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent1);
                 break;
             case R.id.next:
-                Intent intent9 = new Intent(getActivity(), BestSellerActivity.class);
-                startActivity(intent9);
+                intent1.putExtra("id_jenis",9);
+                startActivity(intent1);
                 break;
             default:
                 break;

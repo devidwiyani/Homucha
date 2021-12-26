@@ -90,7 +90,8 @@
                     android:layout_marginTop="5dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -111,7 +112,7 @@
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/button_purchase"
+            android:id="@+id/button_finish"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_gravity="center|bottom"

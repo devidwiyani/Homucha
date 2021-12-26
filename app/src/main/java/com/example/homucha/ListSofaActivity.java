@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -44,33 +45,37 @@ public class ListSofaActivity extends AppCompatActivity {
         switch (id_intent)
         {
             case 1:
-                header.setText("sofa list");
+                header.setText("Sofa List");
                 break;
             case 2:
-                header.setText("meja list");
+                header.setText("Table List");
                 break;
             case 3:
-                header.setText("kursi list");
+                header.setText("Chair List");
                 break;
             case 4:
-                header.setText("dekorasi list");
+                header.setText("Decoration List");
                 break;
             case 5:
-                header.setText("lemari list");
+                header.setText("Storage List");
                 break;
             case 6:
-                header.setText("furniture list");
+                header.setText("Furniture List");
                 break;
             case 7:
-                header.setText("kasur list");
+                header.setText("Bed List");
                 break;
             case 8:
-                header.setText("elektronik list");
+                header.setText("Electronic List");
+                break;
+            case 9:
+                header.setText("Best Seller");
                 break;
             default:
                 header.setText("No Data");
                 break;
         }
+
         produk_id = new ArrayList<>();
         kategori_id = new ArrayList<>();
         produk_nama = new ArrayList<>();
@@ -86,7 +91,40 @@ public class ListSofaActivity extends AppCompatActivity {
         }
         else
         {
-            Cursor cursor1 = database.readSpecCategory(fromHome.getIntExtra("id_jenis",0));
+            int id_jenis = fromHome.getIntExtra("id_jenis",0);
+            SQLiteDatabase dbRead = database.getReadableDatabase();
+            Cursor cursor1;
+            switch (id_jenis){
+                case 1:
+                    cursor1 = database.readSofa();
+                    break;
+                case 2:
+                    cursor1 = database.readMeja();
+                    break;
+                case 3:
+                    cursor1 = database.readKursi();
+                    break;
+                case 4:
+                    cursor1 = database.readDekorasi();
+                    break;
+                case 5:
+                    cursor1 = database.readPenyimpanan();
+                    break;
+                case 6:
+                    cursor1 = database.readFurnitur();
+                    break;
+                case 7:
+                    cursor1 = database.readKasur();
+                    break;
+                case 8:
+                    cursor1 = database.readElektronik();
+                    break;
+                case 9:
+                    cursor1 = database.readBestSeller();
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + id_jenis);
+            }
             if(cursor1.getCount() == 0)
             {
                 Toast.makeText(this, "No Data In Here", Toast.LENGTH_SHORT).show();
@@ -103,6 +141,7 @@ public class ListSofaActivity extends AppCompatActivity {
 
         }
     }
+//
     void storeDataInArrays(){
         Cursor cursor = database.readSofa();
         while (cursor.moveToNext()){

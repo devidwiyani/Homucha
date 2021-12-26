@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment;
 
 public class ProfileFragment extends Fragment{
     RelativeLayout expandableView;
-    ImageButton arrowBtn, btnCart;
+    ImageButton arrowBtn, btnCart, btnRiwayat;
     ImageView imgLogout;
     CardView cardView;
     TextView accName, accEmail, accAddress, accPhone, edit;
@@ -42,6 +42,7 @@ public class ProfileFragment extends Fragment{
         imgLogout = v.findViewById(R.id.img_logout);
         editButton = (Button) v.findViewById(R.id.btn_editProfile);
         btnCart = v.findViewById(R.id.btn_cart);
+        btnRiwayat = v.findViewById(R.id.btn_riwayat);
 
         accName = (TextView) v.findViewById(R.id.prName);
         accEmail = (TextView) v.findViewById(R.id.prEmail);
@@ -109,6 +110,14 @@ public class ProfileFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnRiwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), riwayatBelanja.class);
                 startActivity(intent);
             }
         });

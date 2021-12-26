@@ -6,7 +6,8 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 tools:context=".ListChairActivity"
 android:orientation="vertical"
-android:padding="10dp">
+android:padding="10dp"
+    android:background="#F8F8F8">
 
 <RelativeLayout
     android:id="@+id/toolbar"

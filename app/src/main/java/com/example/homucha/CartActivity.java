@@ -1,13 +1,11 @@
 package com.example.homucha;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +33,7 @@ public class CartActivity extends AppCompatActivity {
         productNameList = new ArrayList();
         productAmountList = new ArrayList();
         database = new DbHelper(getBaseContext());
-        recyclerView = findViewById(R.id.daftarCart);
+        recyclerView = findViewById(R.id.daftarRiwayat);
         getData();
         Cursor getInCart = database.getInCart(idUser);
         layoutManager = new LinearLayoutManager(this);
@@ -44,7 +42,7 @@ public class CartActivity extends AppCompatActivity {
         adapter = new CartAdapter(productImageList, productNameList, productAmountList,getInCart);
         recyclerView.setAdapter(adapter);
         Toast.makeText(this, String.valueOf(getInCart.getCount()), Toast.LENGTH_SHORT).show();
-        Button makeOrder = findViewById(R.id.button_purchase);
+        Button makeOrder = findViewById(R.id.button_finish);
         makeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

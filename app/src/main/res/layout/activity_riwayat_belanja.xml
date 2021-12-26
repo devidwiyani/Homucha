@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ListDecorationActivity"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="#F8F8F8">
+    tools:context=".riwayatBelanja">
 
     <RelativeLayout
         android:id="@+id/toolbar"
@@ -23,7 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_gravity="center_vertical"
-            android:backgroundTint="@color/coklat"
             android:paddingLeft="5dp"
             android:src="@drawable/ic_back" />
 
@@ -33,27 +30,27 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/back"
-            android:text="Decoration List"
-            android:textColor="@color/coklat"
+            android:text="My Shop History"
             android:textSize="18sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
 
-    <ScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/daftarDekorasi"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="10dp">
 
-    </ScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/daftarRiwayat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>
-
-
-

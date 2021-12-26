@@ -1,106 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ProductDetailActivity">
+    android:layout_height="wrap_content"
+    tools:context=".ProductDetailActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <RelativeLayout
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:padding="5dp">
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:src="@drawable/ic_back" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:text="Details"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
+        android:gravity="center_vertical"
+        android:padding="5dp">
 
         <ImageView
-            android:layout_marginTop="15dp"
-            android:id="@+id/img1"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_marginBottom="30dp"/>
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/coklat"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_back" />
 
         <TextView
-            android:id="@+id/t2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Nama Produk"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="#000"/>
-
-        <TextView
-            android:id="@+id/harga"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="harga"
-            android:textColor="@color/kuning"
-            android:textSize="23sp" />
-
-        <TextView
-            android:id="@+id/ab"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:text="Description"
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Details"
+            android:textColor="@color/coklat"
             android:textSize="15sp"
-            android:textColor="#000"/>
+            android:textStyle="bold" />
 
-        <View
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/coklat"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:justificationMode="inter_word"
-            android:text="text deskripsi"
-            android:textColor="@color/abuTua"
-            android:textSize="18sp" />
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginBottom="30dp"/>
 
-        <Button
-            android:id="@+id/addToCart"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="55dp"
-            android:backgroundTint="@color/kuning"
-            android:text="BUY NOW"
-            app:cornerRadius="30dp" />
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nama Produk"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"/>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/harga"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="harga"
+                android:textColor="@color/kuning"
+                android:textSize="20sp" />
 
-</ScrollView>
+            <TextView
+                android:id="@+id/ab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                android:text="Description"
+                android:textSize="15sp"
+                android:textColor="#000"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/coklat"/>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:text="text deskripsi"
+                android:textColor="@color/coklat"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/addToCart"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="55dp"
+                android:backgroundTint="@color/kuning"
+                android:text="BUY NOW"
+                app:cornerRadius="30dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
 

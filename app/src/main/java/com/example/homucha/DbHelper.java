@@ -64,7 +64,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "hargaTotal FLOAT(20,2)," +
                 "jenisPembayaran VARCHAR(100)," +
                 "statusPembayaran VARCHAR(50)," +
-                "statusPengiriman VARCHAR(50))");
+                "statusPengiriman VARCHAR(50)," +
+                "tanggalPembelian DATETIME)");
         database.execSQL("CREATE TABLE det_pembelian(" +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "idPembelian INTEGER," +
@@ -79,6 +80,7 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO tb_kategori VALUES(6,'furniture')");
         database.execSQL("INSERT INTO tb_kategori VALUES(7,'kasur')");
         database.execSQL("INSERT INTO tb_kategori VALUES(8,'elektronik')");
+        database.execSQL("INSERT INTO tb_kategori VALUES(9,'bestseller')");
     }
 
     @Override
@@ -89,12 +91,108 @@ public class DbHelper extends SQLiteOpenHelper {
         database.execSQL("DROP TABLE IF EXISTS tb_carting");
         database.execSQL("DROP TABLE IF EXISTS tb_pembelian");
         database.execSQL("DROP TABLE IF EXISTS det_pembelian");
-        database.execSQL("DROP TABLE IF EXISTS tb_order");
         onCreate(database);
     }
 
     public Cursor readSofa(){
-        String sql = "select * from "+table_produk+" WHERE kategoriId = 1";
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 1";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readMeja(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 2";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readKursi(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 3";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readDekorasi(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 4";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readPenyimpanan(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 5";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readFurnitur(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 6";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readKasur(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 7";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readElektronik(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 8";
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor readBestSeller(){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = 9";
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -107,6 +205,18 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor readSpecCategory(int category){
         String sql = "select * from "+table_produk+"" +
                 " WHERE kategoriId = "+category;
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(sql, null);
+        }
+        return cursor;
+    }
+
+    public Cursor homeBestSeller(int category){
+        String sql = "select * from "+table_produk+"" +
+                " WHERE kategoriId = "+category+" LIMIT 4";
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = null;
@@ -207,15 +317,18 @@ public class DbHelper extends SQLiteOpenHelper {
                 " WHERE idUser ="+id_user,null);
         return inCart;
     }
-
-    public Cursor readOrder(){
-        String sql = "select * from tb_carting" + "WHERE status_pembelian = 1";
-        SQLiteDatabase db = getReadableDatabase();
-
-        Cursor cursor = null;
-        if (db != null) {
-            cursor = db.rawQuery(sql, null);
+    public int getSumHarga(int id_user){
+        SQLiteDatabase dbRead = getReadableDatabase();
+        Cursor inCart = dbRead.rawQuery("SELECT*FROM tb_carting" +
+                " INNER JOIN tb_produk ON tb_carting.idProduk = tb_produk._id" +
+                " WHERE idUser ="+id_user,null);
+        inCart.moveToFirst();
+        int totalHarga = 0;
+        for(int i = 0; i < inCart.getCount(); i++)
+        {
+            inCart.moveToPosition(i);
+            totalHarga = totalHarga + (inCart.getInt(inCart.getColumnIndex("harga"))*inCart.getInt(inCart.getColumnIndex("jumlahBeli")));
         }
-        return cursor;
+        return totalHarga;
     }
 }

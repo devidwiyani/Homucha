@@ -7,7 +7,8 @@
     android:layout_height="wrap_content"
     tools:context=".ListStorageActivity"
     android:padding="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#F8F8F8">
 
     <RelativeLayout
         android:id="@+id/toolbar"

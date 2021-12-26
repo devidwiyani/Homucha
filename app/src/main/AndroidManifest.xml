@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Homucha">
         <activity
+            android:name=".detailRiwayat"
+            android:exported="false" />
+        <activity
+            android:name=".riwayatBelanja"
+            android:exported="false" />
+        <activity
             android:name=".makeOrder"
             android:exported="false" />
         <activity

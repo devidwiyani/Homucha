@@ -47,13 +47,13 @@
             android:layout_marginTop="10dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/daftarCart"
+                android:id="@+id/daftarRiwayat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/button_purchase"
+            android:id="@+id/button_finish"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="16dp"

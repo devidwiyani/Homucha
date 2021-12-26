@@ -5,12 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_barang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         app:cardBackgroundColor="@color/abuTua"
-        app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
-        android:layout_margin="20dp">
+        app:cardElevation="10dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -43,9 +44,25 @@
                 android:text="17"
                 android:textSize="10dp" />
 
+            <TextView
+                android:id="@+id/harga_bayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama_riwayat"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/jumlah_beli"
+                android:layout_toEndOf="@id/jumlah_beli"
+                android:text="TextView"
+                android:textSize="10sp" />
+
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+
+
 
 </FrameLayout>
