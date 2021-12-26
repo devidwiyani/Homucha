@@ -84,30 +84,9 @@ public class detailRiwayat extends AppCompatActivity {
             finish.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
-                    alertDialogBuilder.setTitle("Apakah Barang Ini Sudah Diterima?");
-                    alertDialogBuilder
-                            .setMessage("Click yes to confirm!")
-                            .setCancelable(false)
-                            .setPositiveButton("Yes",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int id) {
-                                            dbWrite.execSQL("UPDATE tb_pembelian SET statusPengiriman = 'Sudah Sampai Di Tujuan'" +
-                                                    " WHERE _id = "+id);
-                                            Toast.makeText(v.getContext(), "Barang sudah sampai. terima kasih sudah membeli di toko kami!", Toast.LENGTH_SHORT).show();
-                                            finish();
-                                        }
-                                    })
-
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                }
-                            });
-
-                    AlertDialog alertDialog = alertDialogBuilder.create();
-                    alertDialog.show();
-
+                    dbWrite.execSQL("UPDATE tb_pembelian SET statusPengiriman = 'Sudah Sampai Di Tujuan' WHERE _id = "+id);
+                    Toast.makeText(v.getContext(), "Barang sudah sampai. terima kasih sudah membeli di toko kami!", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             });
         }
