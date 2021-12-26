@@ -51,7 +51,6 @@ public class CartActivity extends AppCompatActivity {
         getData();
         Cursor getInCart = database.getInCart(idUser);
         int x = getInCart.getCount();
-//        Toast.makeText(CartActivity.this, "Jumlah : " +x, Toast.LENGTH_SHORT).show();
         if (x == 0){
             makeOrder.setVisibility(View.GONE);
         }
@@ -80,4 +79,5 @@ public class CartActivity extends AppCompatActivity {
 //
 //        }
     }
+
 }

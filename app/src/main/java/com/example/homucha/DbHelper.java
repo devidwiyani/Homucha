@@ -29,6 +29,9 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String id_kategori = "_id";
     public static final String row_nkategori = "nama";
 
+    public static final String tabel_carting = "tb_carting";
+    public static final String id_cart = "_id";
+
     private SQLiteDatabase database;
 
     public DbHelper(Context context) {
@@ -330,5 +333,17 @@ public class DbHelper extends SQLiteOpenHelper {
             totalHarga = totalHarga + (inCart.getInt(inCart.getColumnIndex("harga"))*inCart.getInt(inCart.getColumnIndex("jumlahBeli")));
         }
         return totalHarga;
+    }
+
+    public void deleteCart(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(tabel_carting,id_cart+" =?",new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    public void updateJumlah(String getId, String getJumlah) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("UPDATE tb_carting SET jumlahBeli =" +getJumlah+ " WHERE _id= " +getId);
+        db.close();
     }
 }

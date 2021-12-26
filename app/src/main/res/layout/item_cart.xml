@@ -28,36 +28,53 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="4dp"
                 android:layout_toEndOf="@id/image_product"
                 android:text="Sofa"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/harga_bayar"
-                android:text="Rp. "/>
-
-            <TextView
-                android:id="@+id/harga_bayar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:text="harga" />
-
-            <TextView
-                android:id="@+id/quantity"
+                android:id="@+id/rupiah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/nama_riwayat"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/image_product"
-                android:layout_marginTop="5dp"
+                android:text="Rp. "
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/harga_bayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama_riwayat"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@id/rupiah"
+                android:text="harga"
+                android:textSize="13sp"/>
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete"
+                android:background="#0000000"
+                android:textSize="5sp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rupiah"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/image_product"
+                android:textSize="13sp"
                 android:text="Quantity :" />
 
 
@@ -65,11 +82,13 @@
                 android:id="@+id/jumlah_beli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/nama_riwayat"
+                android:layout_below="@id/rupiah"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/quantity"
-                android:text="17"/>
+                android:text="17"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
 
 
 
